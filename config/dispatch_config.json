@@ -1,0 +1,24 @@
+{
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "target": "ou_52fa8f508e88e1efbcbe50c014ecaa6e",
+      "name": "赵小锋"
+    }
+  },
+  "schedule": {
+    "morning": "09:00",
+    "afternoon": "13:00",
+    "evening": "21:00"
+  },
+  "conditions": {
+    "minDayChange": 1.0,
+    "sendEvenIfNoChange": true
+  },
+  "reportSettings": {
+    "includeNews": true,
+    "includeStrategy": true,
+    "maxRecommendations": 7,
+    "disclaimer": "⚠️ 以上建议仅供参考，不构成投资建议。投资有风险，决策需谨慎。"
+  }
+}

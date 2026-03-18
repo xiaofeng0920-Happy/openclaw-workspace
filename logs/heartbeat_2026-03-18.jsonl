@@ -1,0 +1,2 @@
+{"timestamp":"2026-03-18T13:27:00+08:00","type":"afternoon_check","marketDataFile":"data/heartbeat_check_2026-03-18.json","significantChanges":[],"messageSent":true,"messageId":"om_x100b549730eb08a0b35e13669024366","channel":"feishu","target":"ou_52fa8f508e88e1efbcbe50c014ecaa6e","note":"每日午间汇总报告 - 无显著变化 (>3%)"}
+{"timestamp": "2026-03-18T14:27:55.165202", "type": "afternoon_check_2", "stocks_checked": 13, "significant_changes": [], "action": "no_message_needed"}

@@ -1,0 +1,261 @@
+{
+  "stocks": [
+    {
+      "code": "GOOGL",
+      "name": "谷歌-A",
+      "quantity": 583,
+      "cost": 302.37,
+      "current": 302.28,
+      "marketValue": 176229.24,
+      "costValue": 176281.71,
+      "gain": -52.470000000001164,
+      "gainPercent": -0.029764857624765027,
+      "dayChange": -0.01
+    },
+    {
+      "code": "BRK.B",
+      "name": "伯克希尔-B",
+      "quantity": 207,
+      "cost": 440.26,
+      "current": 490.03,
+      "marketValue": 101436.20999999999,
+      "costValue": 91133.81999999999,
+      "gain": 10302.39,
+      "gainPercent": 11.304683596056876,
+      "dayChange": 0.51
+    },
+    {
+      "code": "KO",
+      "name": "可口可乐",
+      "quantity": 1589,
+      "cost": 72.77,
+      "current": 77.34,
+      "marketValue": 122893.26000000001,
+      "costValue": 115631.53,
+      "gain": 7261.7300000000105,
+      "gainPercent": 6.2800604644771285,
+      "dayChange": 0.65
+    },
+    {
+      "code": "ORCL",
+      "name": "甲骨文",
+      "quantity": 647,
+      "cost": 168.89,
+      "current": 155.11,
+      "marketValue": 100356.17000000001,
+      "costValue": 109271.82999999999,
+      "gain": -8915.659999999974,
+      "gainPercent": -8.159156847652294,
+      "dayChange": -0.77
+    },
+    {
+      "code": "MSFT",
+      "name": "微软",
+      "quantity": 156,
+      "cost": 459.08,
+      "current": 395.55,
+      "marketValue": 61705.8,
+      "costValue": 71616.48,
+      "gain": -9910.679999999993,
+      "gainPercent": -13.838546658534451,
+      "dayChange": -2.1
+    },
+    {
+      "code": "NVDA",
+      "name": "英伟达",
+      "quantity": 287,
+      "cost": 187.16,
+      "current": 180.25,
+      "marketValue": 51731.75,
+      "costValue": 53714.92,
+      "gain": -1983.1699999999983,
+      "gainPercent": -3.6920282111562264,
+      "dayChange": -1.26
+    },
+    {
+      "code": "AAPL",
+      "name": "苹果",
+      "quantity": 191,
+      "cost": 264.86,
+      "current": 250.12,
+      "marketValue": 47772.92,
+      "costValue": 50588.26,
+      "gain": -2815.340000000004,
+      "gainPercent": -5.565204258853742,
+      "dayChange": -1.22
+    },
+    {
+      "code": "TSLA",
+      "name": "特斯拉",
+      "quantity": 178,
+      "cost": 428.9,
+      "current": 391.2,
+      "marketValue": 69633.59999999999,
+      "costValue": 76344.2,
+      "gain": -6710.600000000006,
+      "gainPercent": -8.789927722079746,
+      "dayChange": -1.26
+    },
+    {
+      "code": "00700",
+      "name": "腾讯控股",
+      "quantity": 2500,
+      "cost": 585.78,
+      "current": 547.5,
+      "marketValue": 1368750.0,
+      "costValue": 1464450.0,
+      "gain": -95700.0,
+      "gainPercent": -6.534876574823313,
+      "dayChange": -0.94
+    },
+    {
+      "code": "03153",
+      "name": "南方日经 225",
+      "quantity": 12330,
+      "cost": 119.5,
+      "current": 107.1,
+      "marketValue": 1320543.0,
+      "costValue": 1473435.0,
+      "gain": -152892.0,
+      "gainPercent": -10.376569037656903,
+      "dayChange": -1.2
+    },
+    {
+      "code": "00883",
+      "name": "中国海洋石油",
+      "quantity": 11000,
+      "cost": 20.75,
+      "current": 29.76,
+      "marketValue": 327360.0,
+      "costValue": 228250.0,
+      "gain": 99110.0,
+      "gainPercent": 43.42168674698795,
+      "dayChange": 2.76
+    },
+    {
+      "code": "09988",
+      "name": "阿里巴巴-W",
+      "quantity": 5800,
+      "cost": 143.27,
+      "current": 132.5,
+      "marketValue": 768500.0,
+      "costValue": 830966.0000000001,
+      "gain": -62466.00000000012,
+      "gainPercent": -7.517275075033167,
+      "dayChange": -1.12
+    },
+    {
+      "code": "07709",
+      "name": "南方两倍做多",
+      "quantity": 27500,
+      "cost": 24.08,
+      "current": 26.4,
+      "marketValue": 726000.0,
+      "costValue": 662200.0,
+      "gain": 63800.0,
+      "gainPercent": 9.634551495016613,
+      "dayChange": 1.15
+    }
+  ],
+  "summary": {
+    "totalValue": 5242911.95,
+    "totalCost": 5403883.75,
+    "totalGain": -160971.80000000008,
+    "dayChange": -22817.919406,
+    "totalGainPercent": -2.9788168555624477,
+    "dayChangePercent": -0.43521462163788577
+  },
+  "topGainers": [
+    {
+      "code": "00883",
+      "name": "中国海洋石油",
+      "quantity": 11000,
+      "cost": 20.75,
+      "current": 29.76,
+      "marketValue": 327360.0,
+      "costValue": 228250.0,
+      "gain": 99110.0,
+      "gainPercent": 43.42168674698795,
+      "dayChange": 2.76
+    },
+    {
+      "code": "BRK.B",
+      "name": "伯克希尔-B",
+      "quantity": 207,
+      "cost": 440.26,
+      "current": 490.03,
+      "marketValue": 101436.20999999999,
+      "costValue": 91133.81999999999,
+      "gain": 10302.39,
+      "gainPercent": 11.304683596056876,
+      "dayChange": 0.51
+    },
+    {
+      "code": "07709",
+      "name": "南方两倍做多",
+      "quantity": 27500,
+      "cost": 24.08,
+      "current": 26.4,
+      "marketValue": 726000.0,
+      "costValue": 662200.0,
+      "gain": 63800.0,
+      "gainPercent": 9.634551495016613,
+      "dayChange": 1.15
+    }
+  ],
+  "topLosers": [
+    {
+      "code": "TSLA",
+      "name": "特斯拉",
+      "quantity": 178,
+      "cost": 428.9,
+      "current": 391.2,
+      "marketValue": 69633.59999999999,
+      "costValue": 76344.2,
+      "gain": -6710.600000000006,
+      "gainPercent": -8.789927722079746,
+      "dayChange": -1.26
+    },
+    {
+      "code": "03153",
+      "name": "南方日经 225",
+      "quantity": 12330,
+      "cost": 119.5,
+      "current": 107.1,
+      "marketValue": 1320543.0,
+      "costValue": 1473435.0,
+      "gain": -152892.0,
+      "gainPercent": -10.376569037656903,
+      "dayChange": -1.2
+    },
+    {
+      "code": "MSFT",
+      "name": "微软",
+      "quantity": 156,
+      "cost": 459.08,
+      "current": 395.55,
+      "marketValue": 61705.8,
+      "costValue": 71616.48,
+      "gain": -9910.679999999993,
+      "gainPercent": -13.838546658534451,
+      "dayChange": -2.1
+    }
+  ],
+  "alerts": [
+    {
+      "level": "🟡",
+      "type": "大幅亏损",
+      "message": "微软 亏损 -13.8%，建议关注"
+    },
+    {
+      "level": "🟡",
+      "type": "大幅亏损",
+      "message": "南方日经 225 亏损 -10.4%，建议关注"
+    },
+    {
+      "level": "🟢",
+      "type": "大幅盈利",
+      "message": "中国海洋石油 盈利 43.4%，考虑止盈"
+    }
+  ]
+}

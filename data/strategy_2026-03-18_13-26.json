@@ -1,0 +1,196 @@
+{
+  "recommendations": [
+    {
+      "priority": "🟡",
+      "action": "减仓",
+      "target": "微软",
+      "code": "MSFT",
+      "type": "stock",
+      "currentLoss": -9910.679999999993,
+      "lossPercent": -13.838546658534451,
+      "reason": "亏损 -13.8%，考虑换股",
+      "suggestion": "减持 50%，换到强势股",
+      "confidence": "medium"
+    },
+    {
+      "priority": "🟡",
+      "action": "减仓",
+      "target": "南方日经 225",
+      "code": "03153",
+      "type": "stock",
+      "currentLoss": -152892.0,
+      "lossPercent": -10.376569037656903,
+      "reason": "亏损 -10.4%，考虑换股",
+      "suggestion": "减持 50%，换到强势股",
+      "confidence": "medium"
+    },
+    {
+      "priority": "🟢",
+      "action": "止盈",
+      "target": "中国海洋石油",
+      "code": "00883",
+      "type": "stock",
+      "currentGain": 99110.0,
+      "gainPercent": 43.42168674698795,
+      "reason": "盈利 43.4%，建议部分止盈",
+      "suggestion": "止盈 30-50%",
+      "confidence": "medium"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "谷歌-A",
+      "code": "GOOGL",
+      "type": "stock",
+      "currentGain": -52.470000000001164,
+      "gainPercent": -0.029764857624765027,
+      "reason": "走势正常",
+      "suggestion": "继续持有",
+      "confidence": "high"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "伯克希尔-B",
+      "code": "BRK.B",
+      "type": "stock",
+      "currentGain": 10302.39,
+      "gainPercent": 11.304683596056876,
+      "reason": "走势正常",
+      "suggestion": "继续持有",
+      "confidence": "high"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "可口可乐",
+      "code": "KO",
+      "type": "stock",
+      "currentGain": 7261.7300000000105,
+      "gainPercent": 6.2800604644771285,
+      "reason": "走势正常",
+      "suggestion": "继续持有",
+      "confidence": "high"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "甲骨文",
+      "code": "ORCL",
+      "type": "stock",
+      "currentGain": -8915.659999999974,
+      "gainPercent": -8.159156847652294,
+      "reason": "走势正常",
+      "suggestion": "继续持有",
+      "confidence": "high"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "英伟达",
+      "code": "NVDA",
+      "type": "stock",
+      "currentGain": -1983.1699999999983,
+      "gainPercent": -3.6920282111562264,
+      "reason": "走势正常",
+      "suggestion": "继续持有",
+      "confidence": "high"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "苹果",
+      "code": "AAPL",
+      "type": "stock",
+      "currentGain": -2815.340000000004,
+      "gainPercent": -5.565204258853742,
+      "reason": "走势正常",
+      "suggestion": "继续持有",
+      "confidence": "high"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "特斯拉",
+      "code": "TSLA",
+      "type": "stock",
+      "currentGain": -6710.600000000006,
+      "gainPercent": -8.789927722079746,
+      "reason": "走势正常",
+      "suggestion": "继续持有",
+      "confidence": "high"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "腾讯控股",
+      "code": "00700",
+      "type": "stock",
+      "currentGain": -95700.0,
+      "gainPercent": -6.534876574823313,
+      "reason": "走势正常",
+      "suggestion": "继续持有",
+      "confidence": "high"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "阿里巴巴-W",
+      "code": "09988",
+      "type": "stock",
+      "currentGain": -62466.00000000012,
+      "gainPercent": -7.517275075033167,
+      "reason": "走势正常",
+      "suggestion": "继续持有",
+      "confidence": "high"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "南方两倍做多",
+      "code": "07709",
+      "type": "stock",
+      "currentGain": 63800.0,
+      "gainPercent": 9.634551495016613,
+      "reason": "走势正常",
+      "suggestion": "继续持有",
+      "confidence": "high"
+    }
+  ],
+  "portfolioStrategy": {
+    "assetAllocation": {
+      "current": {
+        "US_stocks": 60,
+        "HK_stocks": 23,
+        "options": 10,
+        "cash": 7
+      },
+      "recommended": {
+        "US_stocks": 55,
+        "HK_stocks": 20,
+        "options": 5,
+        "cash": 20
+      }
+    },
+    "riskLevel": "medium-high",
+    "suggestions": [
+      "降低期权仓位至 5% 以下",
+      "增加现金/债券配置到 20%",
+      "考虑增加防御性股票比例"
+    ]
+  },
+  "marketOutlook": {
+    "shortTerm": "震荡",
+    "mediumTerm": "谨慎乐观",
+    "keyRisks": [
+      "美联储利率政策",
+      "地缘政治风险",
+      "科技股估值压力"
+    ],
+    "keyOpportunities": [
+      "能源股延续涨势",
+      "价值股轮动",
+      "港股估值修复"
+    ]
+  }
+}

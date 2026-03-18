@@ -1,5 +1,36 @@
 # HEARTBEAT.md
 
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
+# 锋哥持仓监控 - 每天检查 3 次（早/中/晚）
 
-# Add tasks below when you want the agent to check something periodically.
+## 检查频率
+- 每 4 小时检查一次（覆盖早中晚）
+
+## 检查内容
+1. 读取 `/home/admin/openclaw/workspace/memory/锋哥持仓_2026-03-16.md` 中的持仓数据
+2. 使用 finance-data 技能查询所有股票的最新股价
+3. 计算与基准的盈亏变化
+4. 如果有显著变化（>3%），发送分析给用户
+
+## 发送条件
+- 任何持仓涨跌超过 3% 时发送
+- 每天至少发送一次汇总报告
+
+## 发送渠道
+- 飞书：ou_52fa8f508e88e1efbcbe50c014ecaa6e
+
+---
+
+# 产品规模监控 - 每日检查 + 每月更新
+
+## 每日检查（规模预警）
+- **时间：** 每个交易日 09:00
+- **数据源：** `/home/admin/openclaw/workspace/memory/产品管理规模_*.md`
+- **预警条件：**
+  - 规模 < 500 万：🔴 紧急提醒
+  - 规模 < 1000 万：🟡 关注提醒
+- **发送渠道：** 飞书
+
+## 每月更新（管理规模数据）
+- **时间：** 每月第一个工作日 10:00
+- **任务：** 提醒用户上传最新管理规模 Excel
+- **模板文件：** `memory/产品管理规模_YYYY-MM-DD.md`

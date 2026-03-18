@@ -1,0 +1,124 @@
+{
+  "timestamp": "2026-03-18T13:26:11.832583",
+  "dataSource": "simulation",
+  "stocks": {
+    "US": [
+      {
+        "code": "GOOGL",
+        "price": 302.28,
+        "change": -0.03,
+        "changePercent": -0.01
+      },
+      {
+        "code": "BRK.B",
+        "price": 490.03,
+        "change": 2.5,
+        "changePercent": 0.51
+      },
+      {
+        "code": "KO",
+        "price": 77.34,
+        "change": 0.5,
+        "changePercent": 0.65
+      },
+      {
+        "code": "ORCL",
+        "price": 155.11,
+        "change": -1.2,
+        "changePercent": -0.77
+      },
+      {
+        "code": "MSFT",
+        "price": 395.55,
+        "change": -8.5,
+        "changePercent": -2.1
+      },
+      {
+        "code": "NVDA",
+        "price": 180.25,
+        "change": -2.3,
+        "changePercent": -1.26
+      },
+      {
+        "code": "AAPL",
+        "price": 250.12,
+        "change": -3.1,
+        "changePercent": -1.22
+      },
+      {
+        "code": "TSLA",
+        "price": 391.2,
+        "change": -5.0,
+        "changePercent": -1.26
+      }
+    ],
+    "HK": [
+      {
+        "code": "00700",
+        "price": 547.5,
+        "change": -5.2,
+        "changePercent": -0.94
+      },
+      {
+        "code": "03153",
+        "price": 107.1,
+        "change": -1.3,
+        "changePercent": -1.2
+      },
+      {
+        "code": "00883",
+        "price": 29.76,
+        "change": 0.8,
+        "changePercent": 2.76
+      },
+      {
+        "code": "09988",
+        "price": 132.5,
+        "change": -1.5,
+        "changePercent": -1.12
+      },
+      {
+        "code": "07709",
+        "price": 26.4,
+        "change": 0.3,
+        "changePercent": 1.15
+      }
+    ]
+  },
+  "indices": {
+    "SPX": {
+      "value": 5200,
+      "change": 0.5
+    },
+    "HSI": {
+      "value": 18500,
+      "change": -1.2
+    },
+    "NDX": {
+      "value": 18200,
+      "change": 0.3
+    }
+  },
+  "news": [
+    {
+      "title": "美联储暗示利率政策不变",
+      "source": "彭博",
+      "time": "08:30"
+    },
+    {
+      "title": "腾讯发布新 AI 产品",
+      "source": "路透",
+      "time": "09:15"
+    },
+    {
+      "title": "油价继续上涨突破$85",
+      "source": "CNBC",
+      "time": "09:30"
+    }
+  ],
+  "marketStatus": {
+    "US": "closed",
+    "HK": "open",
+    "nextOpen": "2026-03-18T09:30:00-04:00"
+  }
+}
