@@ -15,6 +15,7 @@ from datetime import datetime, timedelta
 import json
 
 FEISHU_USER_ID = "ou_52fa8f508e88e1efbcbe50c014ecaa6e"
+OPENCLAW_PATH = "/home/admin/.nvm/versions/node/v24.14.0/bin/openclaw"
 
 def get_weather():
     """获取天气预报"""
@@ -90,27 +91,41 @@ def send_to_feishu(message: str):
     """发送飞书消息"""
     try:
         cmd = [
-            'openclaw', 'message', 'send',
+            OPENCLAW_PATH, 'message', 'send',
             '--channel', 'feishu',
             '--target', FEISHU_USER_ID,
             '--message', message
         ]
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-        return result.returncode == 0
+        if result.returncode == 0:
+            print("✅ 消息已发送")
+            return True
+        else:
+            print(f"❌ 消息发送失败：{result.stderr}")
+            return False
     except Exception as e:
         print(f"发送失败：{e}")
         return False
 
 def send_tts(text: str):
-    """发送 TTS 语音"""
+    """发送 TTS 语音（通过 Python 脚本调用）"""
     try:
+        # 使用 sessions_send 或 message 工具发送语音
+        # 由于 openclaw CLI 没有直接的 tts 命令，这里发送文字提醒代替
+        tts_msg = f"🔊 **语音叫醒**\n\n{text}"
         cmd = [
-            'openclaw', 'tts',
+            OPENCLAW_PATH, 'message', 'send',
             '--channel', 'feishu',
-            '--text', text
+            '--target', FEISHU_USER_ID,
+            '--message', tts_msg
         ]
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-        return result.returncode == 0
+        if result.returncode == 0:
+            print("✅ 语音提醒已发送（文字版）")
+            return True
+        else:
+            print(f"❌ 语音提醒失败：{result.stderr}")
+            return False
     except Exception as e:
         print(f"TTS 失败：{e}")
         return False
