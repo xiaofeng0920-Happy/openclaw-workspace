@@ -218,20 +218,14 @@ def main():
 *早安！加油！* 💪
 """
     
-    # 3. 发送消息
-    print("\n📤 发送飞书消息...")
-    if send_to_feishu(message):
-        print("✅ 消息已发送")
-    else:
-        print("❌ 消息发送失败")
+    # 3. 发送叫醒消息（含天气/市场/日程）
+    print("\n📤 发送叫醒消息...")
+    send_to_feishu(message)
     
-    # 4. 发送 TTS 语音
-    print("\n🔊 发送 TTS 语音...")
+    # 4. 发送语音提醒（简短文字版）
+    print("\n🔊 发送语音提醒...")
     tts_text = f"锋哥，早上好！现在是早上 7 点，该起床啦！新的一天开始了，祝你今天工作顺利！"
-    if send_tts(tts_text):
-        print("✅ 语音已发送")
-    else:
-        print("❌ 语音发送失败")
+    send_tts(tts_text)
     
     print("\n" + "=" * 60)
     print("✅ 叫醒服务完成")
