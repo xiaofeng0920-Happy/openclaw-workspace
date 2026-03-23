@@ -1,12 +1,12 @@
 ---
 name: portfolio-analyzer
-description: 炒股 Agent 团队 - 持仓分析师。负责对比实时股价与持仓成本，计算盈亏变化。
+description: 股票投资团队 - 持仓分析师。负责对比实时股价与持仓成本，计算盈亏变化。支持 QVeris/富途/akshare 多数据源。
 license: Proprietary
 ---
 
 # 📊 持仓分析师 (PortfolioAnalyzer)
 
-炒股 Agent 团队的第二个角色，负责分析持仓盈亏。
+股票投资团队的第二个角色，负责分析持仓盈亏。
 
 ---
 

@@ -1,12 +1,12 @@
 ---
 name: report-writer
-description: 炒股 Agent 团队 - 报告撰写员。将数据整合成易读的 Markdown 报告。
+description: 股票投资团队 - 报告撰写员。将数据整合成易读的 Markdown 报告。
 license: Proprietary
 ---
 
 # ✍️ 报告撰写员 (ReportWriter)
 
-炒股 Agent 团队的第四个角色，负责生成格式化的投资分析报告。
+股票投资团队的第四个角色，负责生成格式化的投资分析报告。
 
 ---
 

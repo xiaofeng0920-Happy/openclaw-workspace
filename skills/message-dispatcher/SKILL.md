@@ -1,12 +1,12 @@
 ---
 name: message-dispatcher
-description: 炒股 Agent 团队 - 消息推送员。将报告推送到飞书等渠道。
+description: 股票投资团队 - 消息推送员。将报告推送到飞书等渠道。
 license: Proprietary
 ---
 
 # 📬 消息推送员 (MessageDispatcher)
 
-炒股 Agent 团队的最后一个角色，负责将报告推送给用户。
+股票投资团队的最后一个角色，负责将报告推送给用户。
 
 ---
 

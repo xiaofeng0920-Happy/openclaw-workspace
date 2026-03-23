@@ -1,12 +1,12 @@
 ---
 name: strategy-advisor
-description: 炒股 Agent 团队 - 策略顾问。基于分析结果生成操作建议（买入/卖出/持有）。
+description: 股票投资团队 - 策略顾问。基于分析结果生成操作建议（买入/卖出/持有）。
 license: Proprietary
 ---
 
 # 🧠 策略顾问 (StrategyAdvisor)
 
-炒股 Agent 团队的第三个角色，负责生成投资策略建议。
+股票投资团队的第三个角色，负责生成投资策略建议。
 
 ---
 
