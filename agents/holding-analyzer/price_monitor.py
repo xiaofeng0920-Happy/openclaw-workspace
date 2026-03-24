@@ -264,8 +264,22 @@ def check_price_changes():
             print(f"获取数据失败：{e}")
             return
         
+        # 判断当前是哪个市场的交易时段
+        hour = datetime.now().hour
+        is_hk_session = (9 <= hour < 12) or (13 <= hour < 16)
+        is_us_session = (hour >= 21) or (hour < 4)
+        
+        # 根据交易时段选择股票
+        if is_hk_session:
+            print("  港股交易时段 - 仅监控港股")
+            all_stocks = data.get('hk_stocks', [])
+        elif is_us_session:
+            print("  美股交易时段 - 仅监控美股")
+            all_stocks = data.get('us_stocks', [])
+        else:
+            all_stocks = data.get('us_stocks', []) + data.get('hk_stocks', [])
+        
         significant = []
-        all_stocks = data.get('us_stocks', []) + data.get('hk_stocks', [])
         
         for stock in all_stocks:
             code = stock['symbol']
