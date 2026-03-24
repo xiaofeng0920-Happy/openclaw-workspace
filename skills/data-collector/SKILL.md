@@ -114,7 +114,36 @@ license: Proprietary
 
 ## 🛠️ 使用工具
 
-### 1. QVeris API（新增 - 推荐）
+### 1. 富途 OpenD（主数据源）⭐
+获取真实持仓、实时行情、账户信息
+
+```bash
+# 运行富途数据收集器
+cd /home/admin/openclaw/workspace/skills/data-collector
+python3 futu_collector.py --send
+
+# Python 模块调用
+from futu_collector import get_futu_holdings, check_opend_status
+
+# 检查 OpenD 状态
+if check_opend_status():
+    print("OpenD 运行中")
+
+# 获取真实持仓
+data = get_futu_holdings()
+```
+
+**优势：**
+- 真实持仓数据（非估算）
+- 实时行情
+- 账户资金、购买力
+- 期权持仓
+
+**要求：**
+- OpenD 已安装并启动
+- 已登录富途账户
+
+### 2. QVeris API（备用数据源）
 查询指数行情、资金流向、财经新闻
 
 ```python
@@ -352,11 +381,11 @@ with open(f'/home/admin/openclaw/workspace/data/market_data_{datetime.now().strf
 ### 3. 数据源优先级
 
 #### 股价数据
-- **第一优先级**: QVeris API（同花顺 iFinD）- 全面稳定
-- **第二优先级**: finance-data 技能（MCP）
-- **第三优先级**: akshare（A 股/港股/美股）
-- **第四优先级**: yfinance（美股备选）
-- **第五优先级**: 富途 OpenD（实盘数据）
+- **第一优先级**: 富途 OpenD（实盘数据）⭐ - 真实持仓、实时行情
+- **第二优先级**: QVeris API（同花顺 iFinD）- 全面稳定
+- **第三优先级**: finance-data 技能（MCP）
+- **第四优先级**: akshare（A 股/港股/美股）
+- **第五优先级**: yfinance（美股备选）
 
 #### 指数数据
 - **第一优先级**: QVeris API（ths_ifind.real_time_quotation）
