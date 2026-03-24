@@ -338,6 +338,9 @@ def check_price_changes():
     print("\n" + "=" * 60)
     print("✅ 检查完成")
     print("=" * 60)
+    
+    # 释放锁
+    release_lock()
 
 if __name__ == "__main__":
     check_price_changes()
