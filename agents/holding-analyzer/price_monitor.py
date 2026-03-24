@@ -114,17 +114,34 @@ def is_trading_day():
     return True
 
 def is_trading_hours():
-    """检查是否在交易时间"""
+    """检查是否在交易时间（港股或美股）"""
+    now = datetime.now()
+    hour = now.hour
+    minute = now.minute
+    
+    if not is_trading_day():
+        return False
+    
+    # 港股交易时间：09:30-12:00, 13:00-16:00
+    if (hour == 9 and minute >= 30) or (10 <= hour < 12) or (13 <= hour < 16):
+        return True
+    
+    # 美股交易时间：21:30-04:00
+    if (hour == 21 and minute >= 30) or (22 <= hour < 24) or (0 <= hour < 4):
+        return True
+    
+    return False
+
+def is_hk_after_hours():
+    """检查是否是港股盘后（16:00-18:00）"""
     now = datetime.now()
     hour = now.hour
     
     if not is_trading_day():
         return False
     
-    if (9 <= hour < 12) or (13 <= hour < 16):
-        return True
-    
-    if hour >= 21 or hour < 4:
+    # 港股盘后：16:00-18:00
+    if 16 <= hour < 18:
         return True
     
     return False
@@ -173,6 +190,40 @@ def check_earnings():
     
     return earnings
 
+def generate_daily_summary():
+    """生成盘后总结报告"""
+    print("\n📊 生成盘后总结报告...")
+    
+    try:
+        data = analyze_holdings()
+    except Exception as e:
+        print(f"获取数据失败：{e}")
+        return
+    
+    all_stocks = data.get('us_stocks', []) + data.get('hk_stocks', [])
+    significant = [s for s in all_stocks if abs(s.get('change_pct', 0)) >= 3]
+    
+    # 生成总结报告
+    msg = f"## 📊 盘后总结\n\n"
+    msg += f"**日期：** {datetime.now().strftime('%Y-%m-%d')}\n"
+    msg += f"**时间：** {datetime.now().strftime('%H:%M')}\n\n"
+    
+    msg += f"**显著变化：** {len(significant)} 只股票波动超 3%\n\n"
+    
+    if significant:
+        msg += "| 股票 | 代码 | 涨跌幅 |\n"
+        msg += "|------|------|--------|\n"
+        for s in sorted(significant, key=lambda x: abs(x['change_pct']), reverse=True):
+            flag = "📈" if s['change_pct'] > 0 else "📉"
+            msg += f"| {flag} {s['name']} | {s['code']} | {s['change_pct']:+.2f}% |\n"
+    
+    msg += f"\n_明日 09:30 继续监控_"
+    
+    if send_to_feishu(msg):
+        print("✅ 盘后总结已发送")
+    else:
+        print("❌ 盘后总结发送失败")
+
 def check_price_changes():
     """检查股价变化（交易时段）或新闻/财报（非交易日）"""
     print("=" * 60)
@@ -182,11 +233,24 @@ def check_price_changes():
     
     trading_day = is_trading_day()
     trading_hours = is_trading_hours()
+    hk_after_hours = is_hk_after_hours()
     
     print(f"交易日：{'是' if trading_day else '否'}")
     print(f"交易时段：{'是' if trading_hours else '否'}")
+    print(f"港股盘后：{'是' if hk_after_hours else '否'}")
     
     send_message = '--send' in sys.argv
+    
+    # 港股盘后总结（17:00 发送一次）
+    if hk_after_hours:
+        now = datetime.now()
+        if now.hour == 17 and now.minute <= 5:  # 17:00-17:05 发送
+            print("\n📊 港股盘后 - 发送总结报告...")
+            generate_daily_summary()
+            return
+        else:
+            print("\n⏰ 港股盘后，已发送过总结，跳过本次检查")
+            return
     
     if trading_hours:
         print("\n📈 交易时段 - 检查股价...")
@@ -281,60 +345,10 @@ def check_price_changes():
             print("\n⚠️  有显著变化，但未启用推送（使用 --send 参数）")
     
     else:
-        print("\n📰 非交易日/非交易时段 - 监控新闻和财报...")
-        
-        news = get_financial_news()
-        earnings = check_earnings()
-        
-        reports_dir = Path(__file__).parent / "reports"
-        reports_dir.mkdir(parents=True, exist_ok=True)
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M')
-        report_file = reports_dir / f"news_update_{timestamp}.md"
-        
-        with open(report_file, 'w') as f:
-            f.write(f"# 📰 财经新闻更新\n\n")
-            f.write(f"**时间：** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
-            f.write(f"**时段：** 非交易日\n\n")
-            
-            if news:
-                f.write("## 重要新闻\n\n")
-                for i, n in enumerate(news, 1):
-                    f.write(f"{i}. **{n.get('title', 'N/A')}** - {n.get('source', 'N/A')}\n")
-                f.write("\n")
-            
-            if earnings:
-                f.write("## 财报更新\n\n")
-                for e in earnings:
-                    f.write(f"- **{e['stock']}**: {e['status']} ({e['date']})\n")
-                f.write("\n")
-            
-            if not news and not earnings:
-                f.write("无重要更新\n")
-        
-        print(f"\n💾 报告已保存：{report_file}")
-        
-        if send_message and (news or earnings):
-            print("\n" + "=" * 60)
-            print("📤 发送飞书通知...")
-            
-            msg = f"## 📰 财经资讯更新\n\n"
-            msg += f"**时间：** {datetime.now().strftime('%H:%M')}\n\n"
-            
-            if news:
-                msg += f"**重要新闻：** {len(news)} 条\n\n"
-                for n in news[:3]:
-                    msg += f"- {n.get('title', 'N/A')[:50]}...\n"
-                msg += "\n"
-            
-            if earnings:
-                msg += f"**财报更新：** {len(earnings)} 只\n\n"
-                for e in earnings:
-                    msg += f"- {e['stock']}: {e['status']}\n"
-            
-            if send_to_feishu(msg):
-                print("✅ 推送完成")
-            else:
-                print("❌ 推送失败")
+        # 非交易时段：不监控股价，仅记录日志
+        print("\n⏰ 非交易时段，不监控股价")
+        print("   盘后总结：17:00 发送")
+        print("   下次检查：下一个交易时段")
     
     print("\n" + "=" * 60)
     print("✅ 检查完成")
