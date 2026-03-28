@@ -1,0 +1,4 @@
+﻿symbol,market,price,change,score,signals,macd,rsi,kdj,bollinger,name
+601088,A,48.87,-1.272727272727278,1,['MACD 多头'],bullish,neutral,neutral,neutral,中国神华
+601225,A,26.53,-2.5706940874035964,1,['MACD 多头'],bullish,neutral,neutral,neutral,陕西煤业
+601006,A,5.3,0.7604562737642593,-3,['MACD 死叉'],bearish,neutral,neutral,neutral,大秦铁路

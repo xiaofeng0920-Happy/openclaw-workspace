@@ -1,0 +1,104 @@
+{
+  "metrics": {
+    "mse": 0.017093300897277324,
+    "rmse": 0.1307413511375698,
+    "mae": 0.08944244489100696,
+    "r2": -0.024715486208278348,
+    "ic": 0.03346076512869593
+  },
+  "feature_importance": [
+    {
+      "factor": "momentum_3m",
+      "importance": 7
+    },
+    {
+      "factor": "momentum_6m",
+      "importance": 7
+    },
+    {
+      "factor": "price_strength",
+      "importance": 6
+    },
+    {
+      "factor": "momentum_1m",
+      "importance": 3
+    },
+    {
+      "factor": "dividend_yield",
+      "importance": 2
+    },
+    {
+      "factor": "macd_signal",
+      "importance": 1
+    },
+    {
+      "factor": "profit_margin",
+      "importance": 1
+    },
+    {
+      "factor": "flow_score",
+      "importance": 1
+    },
+    {
+      "factor": "roa",
+      "importance": 1
+    },
+    {
+      "factor": "rsi_14",
+      "importance": 1
+    },
+    {
+      "factor": "roe",
+      "importance": 0
+    },
+    {
+      "factor": "ps_ratio",
+      "importance": 0
+    },
+    {
+      "factor": "pb_ratio",
+      "importance": 0
+    },
+    {
+      "factor": "pe_ratio",
+      "importance": 0
+    },
+    {
+      "factor": "sentiment_score",
+      "importance": 0
+    },
+    {
+      "factor": "debt_to_equity",
+      "importance": 0
+    },
+    {
+      "factor": "turnover_score",
+      "importance": 0
+    },
+    {
+      "factor": "volume_ratio",
+      "importance": 0
+    }
+  ],
+  "factors": [
+    "momentum_1m",
+    "momentum_3m",
+    "momentum_6m",
+    "rsi_14",
+    "macd_signal",
+    "pe_ratio",
+    "pb_ratio",
+    "ps_ratio",
+    "dividend_yield",
+    "roe",
+    "roa",
+    "debt_to_equity",
+    "profit_margin",
+    "sentiment_score",
+    "turnover_score",
+    "flow_score",
+    "volume_ratio",
+    "price_strength"
+  ],
+  "timestamp": "20260327_150337"
+}

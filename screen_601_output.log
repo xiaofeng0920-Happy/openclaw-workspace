@@ -1,0 +1,701 @@
+/home/admin/.local/lib/python3.10/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.1.0)/charset_normalizer (3.4.5) doesn't match a supported version!
+  warnings.warn(
+============================================================
+A 股筛选批次 4/5:601xxx 股票筛选
+条件：PE<50, ROE 连续 5 年>5%, ROIC 连续 5 年>5%, 自由现金流连续 5 年为正，资产负债率<50%
+============================================================
+获取 A 股股票列表...
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:00<00:03,  4.75it/s] 12%|█▎        | 2/16 [00:00<00:03,  4.60it/s] 19%|█▉        | 3/16 [00:00<00:02,  4.66it/s] 25%|██▌       | 4/16 [00:00<00:02,  4.52it/s] 31%|███▏      | 5/16 [00:01<00:02,  4.84it/s] 38%|███▊      | 6/16 [00:01<00:02,  4.53it/s] 44%|████▍     | 7/16 [00:01<00:02,  4.42it/s] 50%|█████     | 8/16 [00:01<00:01,  4.51it/s] 56%|█████▋    | 9/16 [00:01<00:01,  4.42it/s] 62%|██████▎   | 10/16 [00:02<00:01,  4.62it/s] 69%|██████▉   | 11/16 [00:02<00:01,  4.61it/s] 75%|███████▌  | 12/16 [00:02<00:00,  4.84it/s] 81%|████████▏ | 13/16 [00:02<00:00,  4.72it/s] 88%|████████▊ | 14/16 [00:02<00:00,  4.88it/s] 94%|█████████▍| 15/16 [00:03<00:00,  4.73it/s]100%|██████████| 16/16 [00:03<00:00,  4.70it/s]                                               找到 601 开头的股票数量：225
+获取全市场 PE 数据（可能需要 1-2 分钟）...
+  0%|          | 0/58 [00:00<?, ?it/s]  2%|▏         | 1/58 [00:01<01:23,  1.46s/it]  3%|▎         | 2/58 [00:02<01:01,  1.10s/it]  5%|▌         | 3/58 [00:03<00:53,  1.03it/s]  7%|▋         | 4/58 [00:03<00:49,  1.09it/s]  9%|▊         | 5/58 [00:04<00:48,  1.10it/s] 10%|█         | 6/58 [00:06<00:59,  1.14s/it] 12%|█▏        | 7/58 [00:07<00:55,  1.10s/it] 14%|█▍        | 8/58 [00:09<01:04,  1.28s/it] 16%|█▌        | 9/58 [00:09<00:55,  1.13s/it] 17%|█▋        | 10/58 [00:10<00:49,  1.03s/it] 19%|█▉        | 11/58 [00:11<00:50,  1.07s/it] 21%|██        | 12/58 [00:13<00:52,  1.13s/it] 22%|██▏       | 13/58 [00:14<00:50,  1.13s/it] 24%|██▍       | 14/58 [00:15<00:56,  1.28s/it] 26%|██▌       | 15/58 [00:17<00:58,  1.37s/it] 28%|██▊       | 16/58 [00:18<00:58,  1.40s/it] 29%|██▉       | 17/58 [00:20<00:55,  1.35s/it] 31%|███       | 18/58 [00:20<00:46,  1.17s/it] 33%|███▎      | 19/58 [00:21<00:41,  1.06s/it] 34%|███▍      | 20/58 [00:22<00:40,  1.06s/it] 36%|███▌      | 21/58 [00:23<00:35,  1.03it/s] 38%|███▊      | 22/58 [00:24<00:32,  1.12it/s] 40%|███▉      | 23/58 [00:25<00:30,  1.15it/s] 41%|████▏     | 24/58 [00:26<00:35,  1.06s/it] 43%|████▎     | 25/58 [00:27<00:35,  1.09s/it] 45%|████▍     | 26/58 [00:28<00:34,  1.08s/it] 47%|████▋     | 27/58 [00:30<00:36,  1.16s/it] 48%|████▊     | 28/58 [00:31<00:35,  1.18s/it] 50%|█████     | 29/58 [00:32<00:33,  1.14s/it] 52%|█████▏    | 30/58 [00:34<00:35,  1.28s/it] 53%|█████▎    | 31/58 [00:35<00:35,  1.32s/it] 55%|█████▌    | 32/58 [00:37<00:36,  1.42s/it] 57%|█████▋    | 33/58 [00:37<00:31,  1.25s/it] 59%|█████▊    | 34/58 [00:38<00:26,  1.08s/it] 60%|██████    | 35/58 [00:40<00:26,  1.17s/it] 62%|██████▏   | 36/58 [00:41<00:24,  1.12s/it] 64%|██████▍   | 37/58 [00:42<00:24,  1.16s/it] 66%|██████▌   | 38/58 [00:43<00:21,  1.06s/it] 67%|██████▋   | 39/58 [00:44<00:21,  1.14s/it] 69%|██████▉   | 40/58 [00:45<00:22,  1.23s/it] 71%|███████   | 41/58 [00:46<00:20,  1.20s/it] 72%|███████▏  | 42/58 [00:47<00:17,  1.11s/it] 74%|███████▍  | 43/58 [00:49<00:17,  1.14s/it] 76%|███████▌  | 44/58 [00:50<00:15,  1.09s/it] 78%|███████▊  | 45/58 [00:51<00:14,  1.10s/it] 79%|███████▉  | 46/58 [00:52<00:13,  1.15s/it] 81%|████████  | 47/58 [00:53<00:10,  1.00it/s] 83%|████████▎ | 48/58 [00:54<00:10,  1.03s/it] 84%|████████▍ | 49/58 [00:55<00:08,  1.00it/s] 86%|████████▌ | 50/58 [00:56<00:08,  1.03s/it] 88%|████████▊ | 51/58 [00:57<00:07,  1.14s/it] 90%|████████▉ | 52/58 [00:58<00:06,  1.07s/it] 91%|█████████▏| 53/58 [00:59<00:04,  1.08it/s] 93%|█████████▎| 54/58 [01:00<00:04,  1.10s/it] 95%|█████████▍| 55/58 [01:01<00:03,  1.17s/it] 97%|█████████▋| 56/58 [01:02<00:02,  1.02s/it] 98%|█████████▊| 57/58 [01:03<00:01,  1.02s/it]100%|██████████| 58/58 [01:04<00:00,  1.05it/s]                                               获取到 5830 只股票的 PE 数据
+PE<50 的股票数量：174
+
+开始详细财务指标筛选...
+
+[1/174] 检查 601000 (唐山港) PE=12.66...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[2/174] 检查 601001 (晋控煤业) PE=16.44...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[3/174] 检查 601002 (晋亿实业) PE=21.44...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[4/174] 检查 601003 (柳钢股份) PE=13.63...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[6/174] 检查 601006 (大秦铁路) PE=12.89...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[8/174] 检查 601008 (连云港) PE=36.21...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[9/174] 检查 601009 (南京银行) PE=6.35...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[14/174] 检查 601016 (节能风电) PE=31.74...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[15/174] 检查 601018 (宁波港) PE=15.51...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[16/174] 检查 601019 (山东出版) PE=10.94...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[17/174] 检查 601020 (华钰矿业) PE=21.57...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[18/174] 检查 601021 (春秋航空) PE=14.57...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[19/174] 检查 601022 (宁波远洋) PE=16.89...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[21/174] 检查 601033 (永兴股份) PE=16.91...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[22/174] 检查 601038 (一拖股份) PE=17.77...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[23/174] 检查 601058 (赛轮轮胎) PE=11.42...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[24/174] 检查 601059 (信达证券) PE=29.52...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[25/174] 检查 601061 (中信金属) PE=21.28...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[26/174] 检查 601065 (江盐集团) PE=20.91...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[27/174] 检查 601066 (中信建投) PE=17.74...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[30/174] 检查 601077 (渝农商行) PE=6.55...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[31/174] 检查 601083 (锦江航运) PE=9.90...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[33/174] 检查 601088 (中国神华) PE=19.37...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[34/174] 检查 601089 (福元医药) PE=22.35...
+  无法获取财务数据
+
+[35/174] 检查 601096 (宏盛华源) PE=40.98...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[36/174] 检查 601098 (中南传媒) PE=12.44...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[38/174] 检查 601100 (恒立液压) PE=46.15...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[39/174] 检查 601101 (昊华能源) PE=17.11...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[41/174] 检查 601107 (四川成渝) PE=11.19...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[42/174] 检查 601108 (财通证券) PE=13.11...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[44/174] 检查 601112 (振石股份) PE=43.06...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[45/174] 检查 601113 (华鼎股份) PE=19.01...
+  无法获取财务数据
+
+[47/174] 检查 601117 (中国化学) PE=8.63...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[49/174] 检查 601121 (宝地矿业) PE=48.87...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[50/174] 检查 601126 (四方股份) PE=46.01...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[51/174] 检查 601127 (赛力斯) PE=23.47...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[52/174] 检查 601128 (常熟银行) PE=5.26...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[54/174] 检查 601136 (首创证券) PE=42.74...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[55/174] 检查 601137 (博威合金) PE=14.40...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[56/174] 检查 601138 (工业富联) PE=27.87...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[57/174] 检查 601139 (深圳燃气) PE=15.05...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[58/174] 检查 601155 (新城控股) PE=46.83...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[59/174] 检查 601156 (东航物流) PE=10.19...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[60/174] 检查 601158 (重庆水务) PE=21.15...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[62/174] 检查 601163 (三角轮胎) PE=12.22...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[63/174] 检查 601166 (兴业银行) PE=5.11...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[64/174] 检查 601168 (西部矿业) PE=16.55...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[65/174] 检查 601169 (北京银行) PE=4.10...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[66/174] 检查 601177 (杭齿前进) PE=21.16...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[68/174] 检查 601186 (中国铁建) PE=4.81...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[69/174] 检查 601187 (厦门银行) PE=7.42...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[70/174] 检查 601188 (龙江交通) PE=21.34...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[71/174] 检查 601198 (东兴证券) PE=19.06...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[72/174] 检查 601199 (江南水务) PE=15.02...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[73/174] 检查 601200 (上海环境) PE=17.06...
+  无法获取财务数据
+
+[75/174] 检查 601211 (国泰海通) PE=10.65...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[77/174] 检查 601216 (君正集团) PE=12.55...
+  无法获取财务数据
+
+[78/174] 检查 601218 (吉鑫科技) PE=43.97...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[79/174] 检查 601222 (林洋能源) PE=27.85...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[80/174] 检查 601225 (陕西煤业) PE=15.30...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[82/174] 检查 601228 (广州港) PE=25.65...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[83/174] 检查 601229 (上海银行) PE=5.75...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[84/174] 检查 601231 (环旭电子) PE=42.72...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[85/174] 检查 601233 (桐昆股份) PE=20.80...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[86/174] 检查 601236 (红塔证券) PE=30.51...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[89/174] 检查 601288 (农业银行) PE=7.70...
+  无法获取财务数据
+
+[90/174] 检查 601298 (青岛港) PE=10.65...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[91/174] 检查 601311 (骆驼股份) PE=13.78...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[92/174] 检查 601318 (中国平安) PE=7.65...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[93/174] 检查 601319 (中国人保) PE=7.08...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[94/174] 检查 601326 (秦港股份) PE=12.84...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[95/174] 检查 601328 (交通银行) PE=6.36...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[96/174] 检查 601330 (绿色动力) PE=22.45...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[97/174] 检查 601333 (广深铁路) PE=11.31...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[98/174] 检查 601336 (新华保险) PE=5.44...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[99/174] 检查 601339 (百隆东方) PE=14.22...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[102/174] 检查 601368 (绿城水务) PE=48.40...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[103/174] 检查 601369 (陕鼓动力) PE=21.29...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[104/174] 检查 601375 (中原证券) PE=41.15...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[105/174] 检查 601377 (兴业证券) PE=18.23...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[107/174] 检查 601390 (中国中铁) PE=5.73...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[108/174] 检查 601398 (工商银行) PE=7.16...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[110/174] 检查 601456 (国联民生) PE=25.76...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[111/174] 检查 601500 (通用股份) PE=46.87...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[112/174] 检查 601512 (中新集团) PE=11.74...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[114/174] 检查 601518 (吉林高速) PE=10.68...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[116/174] 检查 601528 (瑞丰银行) PE=5.35...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[117/174] 检查 601555 (东吴证券) PE=9.88...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[118/174] 检查 601566 (九牧王) PE=14.73...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[119/174] 检查 601567 (三星医疗) PE=19.52...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[121/174] 检查 601577 (长沙银行) PE=4.37...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[125/174] 检查 601598 (中国外运) PE=11.69...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[126/174] 检查 601599 (浙文影业) PE=25.25...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[127/174] 检查 601600 (中国铝业) PE=15.48...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[128/174] 检查 601601 (中国太保) PE=6.67...
+  无法获取财务数据
+
+[130/174] 检查 601607 (上海医药) PE=9.02...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[132/174] 检查 601609 (金田股份) PE=21.52...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[133/174] 检查 601611 (中国核建) PE=29.19...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[134/174] 检查 601615 (明阳智能) PE=38.23...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[136/174] 检查 601618 (中国中冶) PE=11.90...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[137/174] 检查 601619 (嘉泽新能) PE=22.92...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[138/174] 检查 601628 (中国人寿) PE=6.85...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[139/174] 检查 601633 (长城汽车) PE=18.11...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[140/174] 检查 601636 (旗滨集团) PE=14.04...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[141/174] 检查 601658 (邮储银行) PE=6.95...
+  无法获取财务数据
+
+[142/174] 检查 601665 (齐鲁银行) PE=6.17...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[144/174] 检查 601668 (中国建筑) PE=4.00...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[145/174] 检查 601669 (中国电建) PE=10.25...
+  无法获取财务数据
+
+[146/174] 检查 601677 (明泰铝业) PE=9.96...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[147/174] 检查 601678 (滨化股份) PE=41.63...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[148/174] 检查 601686 (友发集团) PE=12.80...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[149/174] 检查 601688 (华泰证券) PE=9.84...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[150/174] 检查 601689 (拓普集团) PE=36.14...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[151/174] 检查 601696 (中银证券) PE=29.98...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[153/174] 检查 601699 (潞安环能) PE=20.42...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[155/174] 检查 601702 (华峰铝业) PE=15.55...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[156/174] 检查 601717 (中创智领) PE=8.09...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[159/174] 检查 601728 (中国电信) PE=15.72...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[160/174] 检查 601766 (中国中车) PE=13.70...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[162/174] 检查 601778 (晶科科技) PE=41.56...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[163/174] 检查 601788 (光大证券) PE=18.89...
+  无法获取财务数据
+
+[164/174] 检查 601789 (宁波建工) PE=35.73...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[166/174] 检查 601799 (星宇股份) PE=21.80...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[167/174] 检查 601800 (中国交建) PE=6.88...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[168/174] 检查 601801 (皖新传媒) PE=9.59...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[169/174] 检查 601808 (中海油服) PE=20.54...
+  无法获取财务数据
+
+[170/174] 检查 601811 (新华文轩) PE=10.50...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[171/174] 检查 601816 (京沪高铁) PE=17.99...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[172/174] 检查 601818 (光大银行) PE=3.91...
+  无法获取财务数据
+
+[173/174] 检查 601825 (沪农商行) PE=6.09...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[174/174] 检查 601827 (三峰环境) PE=10.51...
+  无法获取财务数据
+
+[176/174] 检查 601838 (成都银行) PE=5.71...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[177/174] 检查 601857 (中国石油) PE=13.12...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[178/174] 检查 601858 (中国科传) PE=45.56...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[179/174] 检查 601860 (紫金银行) PE=6.29...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[180/174] 检查 601865 (福莱特) PE=37.85...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[181/174] 检查 601866 (中远海发) PE=19.71...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[182/174] 检查 601868 (中国能建) PE=22.13...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[184/174] 检查 601872 (招商轮船) PE=22.97...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[185/174] 检查 601877 (正泰电器) PE=13.09...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[186/174] 检查 601878 (浙商证券) PE=17.66...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[187/174] 检查 601880 (辽港股份) PE=30.48...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[188/174] 检查 601881 (中国银河) PE=10.09...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[189/174] 检查 601882 (海天精工) PE=22.72...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[190/174] 检查 601886 (江河集团) PE=15.80...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[191/174] 检查 601888 (中国中免) PE=41.52...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[192/174] 检查 601890 (亚星锚链) PE=34.87...
+  无法获取财务数据
+
+[193/174] 检查 601898 (中煤能源) PE=13.26...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[194/174] 检查 601899 (紫金矿业) PE=16.67...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[195/174] 检查 601900 (南方传媒) PE=9.99...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[196/174] 检查 601901 (方正证券) PE=11.25...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[198/174] 检查 601916 (浙商银行) PE=5.46...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[199/174] 检查 601918 (新集能源) PE=9.69...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[200/174] 检查 601919 (中远海控) PE=7.53...
+  无法获取财务数据
+
+[201/174] 检查 601921 (浙版传媒) PE=20.29...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[202/174] 检查 601928 (凤凰传媒) PE=10.85...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[205/174] 检查 601939 (建设银行) PE=7.27...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[206/174] 检查 601949 (中国出版) PE=37.95...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[207/174] 检查 601952 (苏垦农发) PE=25.37...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[208/174] 检查 601956 (东贝集团) PE=28.90...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[209/174] 检查 601958 (金钼股份) PE=19.02...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[210/174] 检查 601963 (重庆银行) PE=6.32...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[211/174] 检查 601965 (中国汽研) PE=16.56...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[212/174] 检查 601966 (玲珑轮胎) PE=13.20...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[213/174] 检查 601968 (宝钢包装) PE=28.48...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[215/174] 检查 601975 (招商南油) PE=16.49...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[216/174] 检查 601985 (中国核电) PE=17.66...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[217/174] 检查 601988 (中国银行) PE=7.58...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[218/174] 检查 601990 (南京证券) PE=26.24...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[219/174] 检查 601991 (大唐发电) PE=11.22...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[221/174] 检查 601995 (中金公司) PE=18.04...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[223/174] 检查 601997 (贵阳银行) PE=4.02...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[224/174] 检查 601998 (中信银行) PE=6.56...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+[225/174] 检查 601999 (出版传媒) PE=42.71...
+  获取财务数据失败：'NoneType' object has no attribute 'find'
+  无法获取财务数据
+
+============================================================
+筛选完成！符合条件的股票数量：0
+============================================================
+
+未找到符合所有条件的股票。

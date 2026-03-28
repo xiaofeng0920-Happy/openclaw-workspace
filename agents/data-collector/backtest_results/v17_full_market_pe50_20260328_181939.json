@@ -1,0 +1,16 @@
+{
+  "ts": "20260328_181939",
+  "total_stocks": 4724,
+  "qualified_count": 0,
+  "pass_rate": 0.0,
+  "qualified_stocks": [],
+  "fundamental": {},
+  "filtered_stats": {
+    "pe": 4724,
+    "roe": 0,
+    "roic": 0,
+    "fcf": 0,
+    "debt": 0,
+    "missing": 0
+  }
+}

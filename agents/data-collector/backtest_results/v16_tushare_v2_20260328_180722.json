@@ -1,0 +1,18 @@
+{
+  "ts": "20260328_180722",
+  "market": "oscillate",
+  "config": {
+    "position_limit": 0.65,
+    "top_k": 5,
+    "pe_max": 30,
+    "roe_min": 15
+  },
+  "pool_size": 0,
+  "qualified_stocks": [],
+  "fundamental": {},
+  "state_returns": {
+    "bull": 0,
+    "oscillate": 0,
+    "bear": 0
+  }
+}

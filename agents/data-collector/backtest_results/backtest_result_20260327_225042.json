@@ -1,0 +1,10 @@
+{
+  "initial_capital": 1000000,
+  "final_value": 49493.41599999992,
+  "total_return": -95.0506584,
+  "annual_return": -81.84661089221798,
+  "max_drawdown": -95.05014337140923,
+  "sharpe": -3.376669298149105,
+  "trade_count": 46,
+  "win_rate": 60.86956521739131
+}

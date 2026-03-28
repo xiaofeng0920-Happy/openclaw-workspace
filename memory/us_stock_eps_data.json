@@ -1,0 +1,51 @@
+{
+  "GOOGL": {
+    "report_date": "2025-12-31 00:00:00",
+    "eps": "N/A",
+    "roe": "N/A",
+    "gross_margin": "N/A",
+    "net_margin": "N/A"
+  },
+  "KO": {
+    "report_date": "2025-12-31 00:00:00",
+    "eps": "N/A",
+    "roe": "N/A",
+    "gross_margin": "N/A",
+    "net_margin": "N/A"
+  },
+  "ORCL": {
+    "report_date": "2026-02-28 00:00:00",
+    "eps": "N/A",
+    "roe": "N/A",
+    "gross_margin": "N/A",
+    "net_margin": "N/A"
+  },
+  "MSFT": {
+    "report_date": "2025-12-31 00:00:00",
+    "eps": "N/A",
+    "roe": "N/A",
+    "gross_margin": "N/A",
+    "net_margin": "N/A"
+  },
+  "NVDA": {
+    "report_date": "2026-01-25 00:00:00",
+    "eps": "N/A",
+    "roe": "N/A",
+    "gross_margin": "N/A",
+    "net_margin": "N/A"
+  },
+  "AAPL": {
+    "report_date": "2025-12-27 00:00:00",
+    "eps": "N/A",
+    "roe": "N/A",
+    "gross_margin": "N/A",
+    "net_margin": "N/A"
+  },
+  "TSLA": {
+    "report_date": "2025-12-31 00:00:00",
+    "eps": "N/A",
+    "roe": "N/A",
+    "gross_margin": "N/A",
+    "net_margin": "N/A"
+  }
+}

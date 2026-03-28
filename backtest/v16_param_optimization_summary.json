@@ -1,0 +1,41 @@
+{
+  "backtest_period": "2020-01-01 to 2026-03-28",
+  "stock_pool": "54 A-shares + 3 HK stocks = 54 total",
+  "market_states": {
+    "bull_days": 301,
+    "oscillate_days": 1208,
+    "bear_days": 0
+  },
+  "original_params": {
+    "oscillate_position": 0.65,
+    "oscillate_top_k": 5,
+    "oscillate_pe_max": 30,
+    "oscillate_roe_min": 15
+  },
+  "optimized_params": {
+    "oscillate_position": 0.7,
+    "oscillate_top_k": 8,
+    "oscillate_pe_max": 35,
+    "oscillate_roe_min": 12
+  },
+  "results": {
+    "original": {
+      "annual_return": -0.009155917198303332,
+      "max_drawdown": -0.26063818900055263,
+      "sharpe": -0.1356212913711309,
+      "final_value": 955609.0
+    },
+    "optimized": {
+      "annual_return": -0.009191206655249862,
+      "max_drawdown": -0.26275946141763684,
+      "sharpe": -0.14411157687096743,
+      "final_value": 955441.0
+    },
+    "improvement": {
+      "annual_return": -3.528945694653007e-05,
+      "max_drawdown": 0.002121272417084208,
+      "sharpe": -0.00849028549983652,
+      "final_value": -168.0
+    }
+  }
+}

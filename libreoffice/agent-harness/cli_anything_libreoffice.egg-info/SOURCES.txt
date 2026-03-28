@@ -1,0 +1,9 @@
+README.md
+cli_lo.py
+setup.py
+cli_anything_libreoffice.egg-info/PKG-INFO
+cli_anything_libreoffice.egg-info/SOURCES.txt
+cli_anything_libreoffice.egg-info/dependency_links.txt
+cli_anything_libreoffice.egg-info/entry_points.txt
+cli_anything_libreoffice.egg-info/requires.txt
+cli_anything_libreoffice.egg-info/top_level.txt

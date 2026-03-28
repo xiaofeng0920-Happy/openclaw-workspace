@@ -1,0 +1,7 @@
+{
+  "source": "/tmp/tmpe4wkar7y/test_export_pdf.drawio",
+  "target": "output.png",
+  "format": "png",
+  "dpi": 300,
+  "note": "Export requires Draw.io CLI: draw.io -x input.drawio -o output.png --dpi 300"
+}

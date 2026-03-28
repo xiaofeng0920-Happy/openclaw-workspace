@@ -1,0 +1,18 @@
+{
+  "feishu": {
+    "webhook_url": "https://open.feishu.cn/open-apis/bot/v2/hook/YOUR_WEBHOOK_HERE",
+    "secret": "",
+    "enabled": true
+  },
+  "notification": {
+    "default_user": "ou_52fa8f508e88e1efbcbe50c014ecaa6e",
+    "alert_cooldown": 3600,
+    "send_portfolio_daily": true,
+    "send_alerts_realtime": true
+  },
+  "alert_thresholds": {
+    "price_change_pct": 5.0,
+    "buy_margin": 30.0,
+    "sell_premium": 30.0
+  }
+}

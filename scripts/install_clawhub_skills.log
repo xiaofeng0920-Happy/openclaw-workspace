@@ -1,0 +1,87 @@
+⏳ 等待 30 分钟，让 clawhub 速率限制恢复...
+
+🚀 开始安装 clawhub 技能...
+================================
+
+📦 安装：email-daily-summary
+- Resolving email-daily-summary
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+❌ email-daily-summary 安装失败，等待 60 秒后重试...
+- Resolving email-daily-summary
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+⏳ 等待 90 秒...
+
+📦 安装：openclaw-whatsapp
+- Resolving openclaw-whatsapp
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+❌ openclaw-whatsapp 安装失败，等待 60 秒后重试...
+- Resolving openclaw-whatsapp
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+⏳ 等待 90 秒...
+
+📦 安装：agent-telegram
+- Resolving agent-telegram
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+❌ agent-telegram 安装失败，等待 60 秒后重试...
+- Resolving agent-telegram
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+⏳ 等待 90 秒...
+
+📦 安装：crm-manager
+- Resolving crm-manager
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+❌ crm-manager 安装失败，等待 60 秒后重试...
+- Resolving crm-manager
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+⏳ 等待 90 秒...
+
+📦 安装：reddit-readonly
+- Resolving reddit-readonly
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+❌ reddit-readonly 安装失败，等待 60 秒后重试...
+- Resolving reddit-readonly
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+⏳ 等待 90 秒...
+
+📦 安装：youtube-watcher
+- Resolving youtube-watcher
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+❌ youtube-watcher 安装失败，等待 60 秒后重试...
+- Resolving youtube-watcher
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+⏳ 等待 90 秒...
+
+📦 安装：twitter-x-api
+- Resolving twitter-x-api
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+❌ twitter-x-api 安装失败，等待 60 秒后重试...
+- Resolving twitter-x-api
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+⏳ 等待 90 秒...
+
+================================
+✅ 所有技能安装完成！
+
+📋 已安装技能列表:
+akshare-stock
+data-collector
+elite-longterm-memory
+gog
+message-dispatcher
+portfolio-analyzer
+report-writer
+strategy-advisor

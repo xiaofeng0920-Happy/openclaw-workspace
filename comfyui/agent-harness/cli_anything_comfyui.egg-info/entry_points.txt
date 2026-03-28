@@ -1,0 +1,4 @@
+[console_scripts]
+cli-anything-comfyui = src.cli_comfyui:cli
+comfyui-cli = src.cli_comfyui:cli
+

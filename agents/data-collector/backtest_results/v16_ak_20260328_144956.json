@@ -1,0 +1,17 @@
+{
+  "ts": "20260328_144956",
+  "market": "oscillate",
+  "config": {
+    "position_limit": 0.65,
+    "top_k": 5,
+    "pe_max": 30,
+    "roe_min": 15,
+    "weights": {
+      "capital": 0.3,
+      "value": 0.3,
+      "quality": 0.3,
+      "sentiment": 0.1
+    }
+  },
+  "pool_size": 1
+}

@@ -1,0 +1,251 @@
+{
+  "us_stocks": {
+    "GOOGL": {
+      "shares": 583,
+      "current_price": 182.76,
+      "benchmark_price": 178.5,
+      "change_from_benchmark": 2.39,
+      "market_value": 106549.08,
+      "status": "success"
+    },
+    "BRK.B": {
+      "shares": 207,
+      "current_price": 469.43,
+      "benchmark_price": 465.2,
+      "change_from_benchmark": 0.91,
+      "market_value": 97172.01,
+      "status": "success"
+    },
+    "KO": {
+      "shares": 1589,
+      "current_price": 62.2,
+      "benchmark_price": 62.8,
+      "change_from_benchmark": -0.96,
+      "market_value": 98835.8,
+      "status": "success"
+    },
+    "ORCL": {
+      "shares": 647,
+      "current_price": 184.45,
+      "benchmark_price": 185.3,
+      "change_from_benchmark": -0.46,
+      "market_value": 119339.15,
+      "status": "success"
+    },
+    "MSFT": {
+      "shares": 156,
+      "current_price": 421.88,
+      "benchmark_price": 420.15,
+      "change_from_benchmark": 0.41,
+      "market_value": 65813.28,
+      "status": "success"
+    },
+    "NVDA": {
+      "shares": 287,
+      "current_price": 141.51,
+      "benchmark_price": 138.45,
+      "change_from_benchmark": 2.21,
+      "market_value": 40613.37,
+      "status": "success"
+    },
+    "AAPL": {
+      "shares": 191,
+      "current_price": 223.86,
+      "benchmark_price": 225.8,
+      "change_from_benchmark": -0.86,
+      "market_value": 42757.26,
+      "status": "success"
+    },
+    "TSLA": {
+      "shares": 178,
+      "current_price": 355.62,
+      "benchmark_price": 345.6,
+      "change_from_benchmark": 2.9,
+      "market_value": 63300.36,
+      "status": "success"
+    }
+  },
+  "hk_stocks": {
+    "00700": {
+      "shares": 2500,
+      "name": "腾讯控股",
+      "current_price": 420.48,
+      "benchmark_price": 412.8,
+      "change_from_benchmark": 1.86,
+      "market_value": 1051200.0,
+      "status": "success"
+    },
+    "03153": {
+      "shares": 12330,
+      "name": "南方日经",
+      "current_price": 1.25,
+      "benchmark_price": 1.285,
+      "change_from_benchmark": -2.72,
+      "market_value": 15412.5,
+      "status": "success"
+    },
+    "00883": {
+      "shares": 11000,
+      "name": "中海油",
+      "current_price": 14.27,
+      "benchmark_price": 14.52,
+      "change_from_benchmark": -1.72,
+      "market_value": 156970.0,
+      "status": "success"
+    },
+    "09988": {
+      "shares": 5800,
+      "name": "阿里巴巴",
+      "current_price": 101.32,
+      "benchmark_price": 98.5,
+      "change_from_benchmark": 2.86,
+      "market_value": 587656.0,
+      "status": "success"
+    },
+    "07709": {
+      "shares": 27500,
+      "name": "南方两倍",
+      "current_price": 0.49,
+      "benchmark_price": 0.485,
+      "change_from_benchmark": 1.03,
+      "market_value": 13475.0,
+      "status": "success"
+    }
+  },
+  "indices": {
+    "S&P500": {
+      "value": 5985.25,
+      "change": "+0.45%"
+    },
+    "NASDAQ": {
+      "value": 19520.8,
+      "change": "+0.68%"
+    },
+    "HSI": {
+      "value": 21850.5,
+      "change": "-0.32%"
+    }
+  },
+  "news": [
+    {
+      "title": "年内新增 13 只\"A+H\"股 港股 IPO 后备军持续扩容",
+      "source": "证券时报",
+      "time": "2026-03-19 07:30",
+      "summary": "港股 IPO 市场持续活跃，多家企业筹备上市"
+    },
+    {
+      "title": "大盘调整，算力硬件股反攻，关注沪深 300ETF",
+      "source": "东方财富",
+      "time": "2026-03-19 07:15",
+      "summary": "A 股市场震荡，科技股表现分化"
+    },
+    {
+      "title": "失守 4100 点！下周 A 股延续震荡格局",
+      "source": "新浪财经",
+      "time": "2026-03-19 06:50",
+      "summary": "上证指数短期调整，分析师预计震荡整理"
+    }
+  ],
+  "financial_reports": {
+    "GOOGL": {
+      "revenue": "862.5 亿 USD",
+      "net_income": "236.8 亿 USD",
+      "eps": "1.89 USD",
+      "revenue_yoy": "+15.2%",
+      "net_income_yoy": "+42.5%",
+      "report_date": "2025-Q4",
+      "status": "success"
+    },
+    "BRK.B": {
+      "revenue": "925.3 亿 USD",
+      "net_income": "962.2 亿 USD",
+      "eps": "6.45 USD",
+      "revenue_yoy": "+21.5%",
+      "net_income_yoy": "+125.8%",
+      "report_date": "2025-Q4",
+      "status": "success"
+    },
+    "KO": {
+      "revenue": "118.6 亿 USD",
+      "net_income": "28.9 亿 USD",
+      "eps": "0.68 USD",
+      "revenue_yoy": "+8.3%",
+      "net_income_yoy": "+12.5%",
+      "report_date": "2025-Q4",
+      "status": "success"
+    },
+    "ORCL": {
+      "revenue": "142.8 亿 USD",
+      "net_income": "35.2 亿 USD",
+      "eps": "1.25 USD",
+      "revenue_yoy": "+6.8%",
+      "net_income_yoy": "+15.2%",
+      "report_date": "2025-Q3",
+      "status": "success"
+    },
+    "MSFT": {
+      "revenue": "618.6 亿 USD",
+      "net_income": "218.4 亿 USD",
+      "eps": "2.94 USD",
+      "revenue_yoy": "+17.6%",
+      "net_income_yoy": "+20.8%",
+      "report_date": "2025-Q2",
+      "status": "success"
+    },
+    "NVDA": {
+      "revenue": "350.8 亿 USD",
+      "net_income": "189.2 亿 USD",
+      "eps": "7.68 USD",
+      "revenue_yoy": "+122.4%",
+      "net_income_yoy": "+168.5%",
+      "report_date": "2025-Q4",
+      "status": "success"
+    },
+    "AAPL": {
+      "revenue": "894.5 亿 USD",
+      "net_income": "236.4 亿 USD",
+      "eps": "1.53 USD",
+      "revenue_yoy": "-4.3%",
+      "net_income_yoy": "-2.8%",
+      "report_date": "2025-Q1",
+      "status": "success"
+    },
+    "TSLA": {
+      "revenue": "251.7 亿 USD",
+      "net_income": "79.3 亿 USD",
+      "eps": "2.27 USD",
+      "revenue_yoy": "+3.5%",
+      "net_income_yoy": "+115.2%",
+      "report_date": "2025-Q4",
+      "status": "success"
+    },
+    "00700": {
+      "revenue": "1558.2 亿 CNY",
+      "net_income": "1156.5 亿 CNY",
+      "eps": "12.15 CNY",
+      "revenue_yoy": "+10.2%",
+      "net_income_yoy": "+38.5%",
+      "report_date": "2025-Q4",
+      "status": "success"
+    },
+    "00883": {
+      "revenue": "428.6 亿 CNY",
+      "net_income": "125.8 亿 CNY",
+      "eps": "0.85 CNY",
+      "revenue_yoy": "+18.5%",
+      "net_income_yoy": "+25.8%",
+      "report_date": "2025-Q4",
+      "status": "success"
+    },
+    "09988": {
+      "revenue": "2365.4 亿 CNY",
+      "net_income": "712.8 亿 CNY",
+      "eps": "3.45 CNY",
+      "revenue_yoy": "+8.6%",
+      "net_income_yoy": "+12.5%",
+      "report_date": "2025-Q4",
+      "status": "success"
+    }
+  },
+  "timestamp": "2026-03-19 07:56:54"
+}

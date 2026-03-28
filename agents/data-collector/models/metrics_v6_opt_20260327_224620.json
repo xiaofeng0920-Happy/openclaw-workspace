@@ -1,0 +1,11 @@
+{
+  "version": "v6",
+  "optimization": "simplified_factors",
+  "metrics": {
+    "rmse": 0.08700017700328105,
+    "r2": -0.0169151575125861,
+    "ic": 0.13563947084959205
+  },
+  "data_size": 45026,
+  "timestamp": "20260327_224620"
+}

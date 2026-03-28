@@ -1,0 +1,14 @@
+README.md
+setup.py
+cli_anything_gimp/__init__.py
+cli_anything_gimp/batch_commands.py
+cli_anything_gimp/cli.py
+cli_anything_gimp/export_commands.py
+cli_anything_gimp/image_commands.py
+cli_anything_gimp/project_commands.py
+cli_anything_gimp.egg-info/PKG-INFO
+cli_anything_gimp.egg-info/SOURCES.txt
+cli_anything_gimp.egg-info/dependency_links.txt
+cli_anything_gimp.egg-info/entry_points.txt
+cli_anything_gimp.egg-info/requires.txt
+cli_anything_gimp.egg-info/top_level.txt

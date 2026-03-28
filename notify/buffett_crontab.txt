@@ -1,0 +1,36 @@
+# ============================================
+# 巴菲特投资系统 - 交易日定时任务
+# 生成时间：2026-03-21 13:37:47
+# ============================================
+
+# 环境变量
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# 日志目录
+LOG_DIR=/tmp/buffett_system
+
+# ============================================
+# 盘前检查 (交易日 09:00)
+# ============================================
+0 9 * * 1-5 cd /home/admin/openclaw/workspace && python3 notify/cron_config.py --pre-market >> $LOG_DIR/pre_market.log 2>&1
+
+# ============================================
+# 盘中监控 (交易日每 30 分钟)
+# ============================================
+*/30 9-15 * * 1-5 cd /home/admin/openclaw/workspace && python3 notify/price_alert.py --check >> $LOG_DIR/intra_day.log 2>&1
+
+# ============================================
+# 盘后分析 (交易日 16:30)
+# ============================================
+30 16 * * 1-5 cd /home/admin/openclaw/workspace && python3 strategies/buffett_analyzer.py >> $LOG_DIR/post_market.log 2>&1
+
+# ============================================
+# 心跳检查 (每 4 小时)
+# ============================================
+0 */4 * * * cd /home/admin/openclaw/workspace && python3 notify/cron_config.py --monitor >> $LOG_DIR/heartbeat.log 2>&1
+
+# ============================================
+# 产品规模检查 (交易日 09:00)
+# ============================================
+0 9 * * 1-5 cd /home/admin/openclaw/workspace && python3 notify/cron_config.py --check-scale >> $LOG_DIR/scale_check.log 2>&1

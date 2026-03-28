@@ -1,0 +1,269 @@
+{
+  "ts": "20260328_090751",
+  "market": "oscillate",
+  "results": [
+    {
+      "holding_period": 10,
+      "top_k": 3,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": 6.064322120030107,
+      "win_rate": 44.11764705882353,
+      "trades": 68,
+      "final_value": 1060643.221200301
+    },
+    {
+      "holding_period": 10,
+      "top_k": 3,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": 3.145312366940035,
+      "win_rate": 42.028985507246375,
+      "trades": 69,
+      "final_value": 1031453.1236694003
+    },
+    {
+      "holding_period": 10,
+      "top_k": 5,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": 7.591489262340194,
+      "win_rate": 44.73684210526316,
+      "trades": 114,
+      "final_value": 1075914.892623402
+    },
+    {
+      "holding_period": 10,
+      "top_k": 5,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": 5.24006202677011,
+      "win_rate": 43.859649122807014,
+      "trades": 114,
+      "final_value": 1052400.620267701
+    },
+    {
+      "holding_period": 10,
+      "top_k": 10,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": 3.6541294297338,
+      "win_rate": 43.66812227074236,
+      "trades": 229,
+      "final_value": 1036541.294297338
+    },
+    {
+      "holding_period": 10,
+      "top_k": 10,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": 3.241320467093831,
+      "win_rate": 44.10480349344978,
+      "trades": 229,
+      "final_value": 1032413.2046709383
+    },
+    {
+      "holding_period": 20,
+      "top_k": 3,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": 3.15073397485005,
+      "win_rate": 48.484848484848484,
+      "trades": 33,
+      "final_value": 1031507.3397485005
+    },
+    {
+      "holding_period": 20,
+      "top_k": 3,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": 3.1631156646500456,
+      "win_rate": 45.45454545454545,
+      "trades": 33,
+      "final_value": 1031631.1566465005
+    },
+    {
+      "holding_period": 20,
+      "top_k": 5,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": -10.643821126129922,
+      "win_rate": 45.45454545454545,
+      "trades": 55,
+      "final_value": 893561.7887387008
+    },
+    {
+      "holding_period": 20,
+      "top_k": 5,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": -11.816237470089924,
+      "win_rate": 49.09090909090909,
+      "trades": 55,
+      "final_value": 881837.6252991008
+    },
+    {
+      "holding_period": 20,
+      "top_k": 10,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": -17.57497847731634,
+      "win_rate": 44.54545454545455,
+      "trades": 110,
+      "final_value": 824250.2152268366
+    },
+    {
+      "holding_period": 20,
+      "top_k": 10,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": -15.092334393796255,
+      "win_rate": 48.18181818181818,
+      "trades": 110,
+      "final_value": 849076.6560620375
+    },
+    {
+      "holding_period": 30,
+      "top_k": 3,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": -5.237282203599974,
+      "win_rate": 42.857142857142854,
+      "trades": 21,
+      "final_value": 947627.1779640003
+    },
+    {
+      "holding_period": 30,
+      "top_k": 3,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": -6.145561103599972,
+      "win_rate": 42.857142857142854,
+      "trades": 21,
+      "final_value": 938544.3889640003
+    },
+    {
+      "holding_period": 30,
+      "top_k": 5,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": -6.107563490980002,
+      "win_rate": 42.857142857142854,
+      "trades": 35,
+      "final_value": 938924.3650902
+    },
+    {
+      "holding_period": 30,
+      "top_k": 5,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": -8.012201980859937,
+      "win_rate": 37.142857142857146,
+      "trades": 35,
+      "final_value": 919877.9801914006
+    },
+    {
+      "holding_period": 30,
+      "top_k": 10,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": -7.559793360276393,
+      "win_rate": 42.857142857142854,
+      "trades": 70,
+      "final_value": 924402.0663972361
+    },
+    {
+      "holding_period": 30,
+      "top_k": 10,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": -9.148812174806382,
+      "win_rate": 42.857142857142854,
+      "trades": 70,
+      "final_value": 908511.8782519362
+    },
+    {
+      "holding_period": 60,
+      "top_k": 3,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": -5.603868500000029,
+      "win_rate": 66.66666666666666,
+      "trades": 6,
+      "final_value": 943961.3149999997
+    },
+    {
+      "holding_period": 60,
+      "top_k": 3,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": -5.488655300000031,
+      "win_rate": 66.66666666666666,
+      "trades": 6,
+      "final_value": 945113.4469999997
+    },
+    {
+      "holding_period": 60,
+      "top_k": 5,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": -6.086083380000014,
+      "win_rate": 70.0,
+      "trades": 10,
+      "final_value": 939139.1661999999
+    },
+    {
+      "holding_period": 60,
+      "top_k": 5,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": -5.05307518000002,
+      "win_rate": 70.0,
+      "trades": 10,
+      "final_value": 949469.2481999998
+    },
+    {
+      "holding_period": 60,
+      "top_k": 10,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": -7.786037047680002,
+      "win_rate": 65.0,
+      "trades": 20,
+      "final_value": 922139.6295232
+    },
+    {
+      "holding_period": 60,
+      "top_k": 10,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": -6.945267106869981,
+      "win_rate": 65.0,
+      "trades": 20,
+      "final_value": 930547.3289313002
+    }
+  ],
+  "top5": [
+    {
+      "holding_period": 10,
+      "top_k": 5,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": 7.591489262340194,
+      "win_rate": 44.73684210526316,
+      "trades": 114,
+      "final_value": 1075914.892623402
+    },
+    {
+      "holding_period": 10,
+      "top_k": 3,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": 6.064322120030107,
+      "win_rate": 44.11764705882353,
+      "trades": 68,
+      "final_value": 1060643.221200301
+    },
+    {
+      "holding_period": 10,
+      "top_k": 5,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": 5.24006202677011,
+      "win_rate": 43.859649122807014,
+      "trades": 114,
+      "final_value": 1052400.620267701
+    },
+    {
+      "holding_period": 10,
+      "top_k": 10,
+      "weights": "\u9707\u8361\u5747\u8861",
+      "total_return": 3.6541294297338,
+      "win_rate": 43.66812227074236,
+      "trades": 229,
+      "final_value": 1036541.294297338
+    },
+    {
+      "holding_period": 10,
+      "top_k": 10,
+      "weights": "\u91cd\u8d44\u91d1",
+      "total_return": 3.241320467093831,
+      "win_rate": 44.10480349344978,
+      "trades": 229,
+      "final_value": 1032413.2046709383
+    }
+  ]
+}

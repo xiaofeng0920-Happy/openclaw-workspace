@@ -15,16 +15,24 @@
 import json
 import sys
 import subprocess
+import requests
 from pathlib import Path
 from datetime import datetime
 import os
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from analyzer import analyze_holdings, ALERT_THRESHOLD, get_relevant_news
+from analyzer import analyze_holdings, ALERT_THRESHOLD, get_relevant_news, HOLDINGS_US, HOLDINGS_HK
+
+# 【方案 1 升级】导入情绪因子模块
+try:
+    from sentiment_factor import analyze_sentiment_for_holdings
+except ImportError:
+    print("警告：情绪因子模块未找到")
 
 FEISHU_USER_ID = "ou_52fa8f508e88e1efbcbe50c014ecaa6e"
-OPENCLAW_PATH = "/home/admin/.nvm/versions/node/v24.14.0/bin/openclaw"
+FEISHU_APP_ID = "cli_a92873946239dbd1"
+FEISHU_APP_SECRET = "7TyxAnUzgfGyjzi0iIMchgCzHgIbnqju"
 CACHE_FILE = Path(__file__).parent / "data" / "price_cache.json"
 
 # 防止重复推送的标志文件
@@ -63,12 +71,28 @@ def release_lock():
     if LOCK_FILE.exists():
         LOCK_FILE.unlink()
 
+def get_tenant_access_token():
+    """获取飞书 tenant_access_token"""
+    import requests
+    url = "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal"
+    payload = {
+        "app_id": FEISHU_APP_ID,
+        "app_secret": FEISHU_APP_SECRET
+    }
+    response = requests.post(url, json=payload, timeout=10)
+    result = response.json()
+    if result.get("code") == 0:
+        return result.get("tenant_access_token")
+    else:
+        raise Exception(f"获取 token 失败：{result}")
+
 def send_to_feishu(message: str):
     """发送飞书消息（带锁机制防止重复）"""
+    import requests
+    import time
     try:
         cache_file = Path(__file__).parent / "data" / "last_sent.json"
         if cache_file.exists():
-            import time
             with open(cache_file, 'r') as f:
                 last_sent = json.load(f)
             if time.time() - last_sent.get('time', 0) < 300:
@@ -76,16 +100,26 @@ def send_to_feishu(message: str):
                     print("⏰ 5 分钟内已发送相同内容，跳过")
                     return True
         
-        cmd = [
-            OPENCLAW_PATH, 'message', 'send',
-            '--channel', 'feishu',
-            '--target', FEISHU_USER_ID,
-            '--message', message
-        ]
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+        # 获取 token
+        token = get_tenant_access_token()
         
-        if result.returncode == 0:
-            import time
+        # 发送消息
+        url = "https://open.feishu.cn/open-apis/im/v1/messages"
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json"
+        }
+        params = {"receive_id_type": "open_id"}
+        payload = {
+            "receive_id": FEISHU_USER_ID,
+            "msg_type": "text",
+            "content": json.dumps({"text": message})
+        }
+        
+        response = requests.post(url, headers=headers, params=params, json=payload, timeout=30)
+        result = response.json()
+        
+        if result.get("code") == 0:
             with open(cache_file, 'w') as f:
                 json.dump({'time': time.time(), 'hash': hash(message)}, f)
             return True
@@ -213,9 +247,12 @@ def generate_daily_summary():
     if significant:
         msg += "| 股票 | 代码 | 涨跌幅 |\n"
         msg += "|------|------|--------|\n"
-        for s in sorted(significant, key=lambda x: abs(x['change_pct']), reverse=True):
-            flag = "📈" if s['change_pct'] > 0 else "📉"
-            msg += f"| {flag} {s['name']} | {s['code']} | {s['change_pct']:+.2f}% |\n"
+        for s in sorted(significant, key=lambda x: abs(x.get('change_pct', 0)), reverse=True):
+            flag = "📈" if s.get('change_pct', 0) > 0 else "📉"
+            code = s.get('code', s.get('symbol', 'N/A'))
+            name = s.get('name', 'Unknown')
+            change = s.get('change_pct', 0)
+            msg += f"| {flag} {name} | {code} | {change:+.2f}% |\n"
     
     msg += f"\n_明日 09:30 继续监控_"
     
@@ -298,6 +335,22 @@ def check_price_changes():
             flag = "📈" if s['change_pct'] > 0 else "📉"
             print(f"  {flag} {s['code']}: {s['change_pct']:+.2f}%")
         
+        # 【方案 1 升级】情绪因子分析
+        print("\n📊 正在计算情绪因子...")
+        try:
+            sentiment_us = analyze_sentiment_for_holdings(HOLDINGS_US, market="US")
+            sentiment_hk = analyze_sentiment_for_holdings(HOLDINGS_HK, market="HK")
+            
+            # 找出情绪评分最高和最低的股票
+            all_sentiment = sentiment_us + sentiment_hk
+            if all_sentiment:
+                top_sentiment = max(all_sentiment, key=lambda x: x['sentiment_score'])
+                bottom_sentiment = min(all_sentiment, key=lambda x: x['sentiment_score'])
+                print(f"  ✓ 情绪最高：{top_sentiment['symbol']} ({top_sentiment['sentiment_score']}分)")
+                print(f"  ✓ 情绪最低：{bottom_sentiment['symbol']} ({bottom_sentiment['sentiment_score']}分)")
+        except Exception as e:
+            print(f"  ⚠ 情绪因子计算失败：{e}")
+        
         save_cache({
             'timestamp': datetime.now().isoformat(),
             'stocks': {s['symbol']: s.get('change_pct', 0) for s in all_stocks}
@@ -321,6 +374,24 @@ def check_price_changes():
                     f.write(f"| {flag} {s['name']} | {s['code']} | {s['change_pct']:+.2f}% |\n")
             else:
                 f.write("无显著变化股票\n")
+            
+            # 【方案 1 升级】情绪因子
+            f.write(f"\n## 📊 情绪因子速览\n\n")
+            f.write(f"**新权重：** 动量 35% | 价值 25% | 质量 25% | 情绪 15%\n\n")
+            try:
+                sentiment_us = analyze_sentiment_for_holdings(HOLDINGS_US, market="US")
+                sentiment_hk = analyze_sentiment_for_holdings(HOLDINGS_HK, market="HK")
+                
+                f.write("### 情绪评分 Top 3\n\n")
+                f.write("| 市场 | 股票 | 名称 | 情绪评分 |\n")
+                f.write("|------|------|------|---------|\n")
+                
+                all_sentiment = sorted(sentiment_us + sentiment_hk, key=lambda x: x['sentiment_score'], reverse=True)
+                for s in all_sentiment[:3]:
+                    market = "港股" if s['symbol'].startswith('0') else "美股"
+                    f.write(f"| {market} | {s['symbol']} | {s['name']} | {s['sentiment_score']} |\n")
+            except Exception as e:
+                f.write(f"*情绪因子计算失败：{e}*\n")
         
         print(f"\n💾 报告已保存：{report_file}")
         

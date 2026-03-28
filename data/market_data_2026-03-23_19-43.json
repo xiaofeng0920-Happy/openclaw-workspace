@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-03-23T19:43:20.727894",
+  "dataSource": "QVeris + akshare",
+  "stocks": {
+    "US": [
+      {
+        "code": "GOOGL",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": "N/A"
+      },
+      {
+        "code": "BRK.B",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": "N/A"
+      },
+      {
+        "code": "KO",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": "N/A"
+      },
+      {
+        "code": "ORCL",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": "N/A"
+      },
+      {
+        "code": "MSFT",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": "N/A"
+      },
+      {
+        "code": "NVDA",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": "N/A"
+      },
+      {
+        "code": "AAPL",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": "N/A"
+      },
+      {
+        "code": "TSLA",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": "N/A"
+      }
+    ],
+    "HK": [
+      {
+        "code": "00700",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": "N/A"
+      },
+      {
+        "code": "03153",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": "N/A"
+      },
+      {
+        "code": "00883",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": "N/A"
+      },
+      {
+        "code": "09988",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": "N/A"
+      },
+      {
+        "code": "07709",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": "N/A"
+      }
+    ]
+  },
+  "indices": {},
+  "news": [],
+  "moneyflow": {
+    "inflow_top10": [],
+    "outflow_top10": []
+  }
+}

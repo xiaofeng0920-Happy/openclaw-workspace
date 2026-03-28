@@ -1,0 +1,181 @@
+{
+  "timestamp": "2026-03-23T19:45:08.754925",
+  "dataSource": "QVeris + holding-analyzer + akshare",
+  "stocks": {
+    "US": [
+      {
+        "code": "GOOGL",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": -0.4234484583829472
+      },
+      {
+        "code": "BRK.B",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": -1.8549884700936627
+      },
+      {
+        "code": "KO",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": -3.3488492371347345
+      },
+      {
+        "code": "ORCL",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": -3.5007414093224205
+      },
+      {
+        "code": "MSFT",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": -3.4584755403868046
+      },
+      {
+        "code": "NVDA",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": -4.188626907073515
+      },
+      {
+        "code": "AAPL",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": -0.851591236206619
+      },
+      {
+        "code": "TSLA",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": -5.940695296523519
+      }
+    ],
+    "HK": [
+      {
+        "code": "00700",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": -6.301369863013699
+      },
+      {
+        "code": "00883",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": -0.6048387096774303
+      },
+      {
+        "code": "09988",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": -0.37735849056603776
+      },
+      {
+        "code": "03153",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": -0.6069094304388343
+      },
+      {
+        "code": "07709",
+        "price": "N/A",
+        "change": "N/A",
+        "changePercent": 22.04545454545455
+      }
+    ]
+  },
+  "indices": {
+    "sh000300": {
+      "value": 4418.0,
+      "change": -149.02,
+      "change_pct": -3.26
+    },
+    "sh000016": {
+      "value": 2792.33,
+      "change": -91.53,
+      "change_pct": -3.17
+    },
+    "HK.HSI": {
+      "value": 24404.05,
+      "change": -873.27,
+      "change_pct": -3.45
+    }
+  },
+  "news": [
+    {
+      "title": "美股最新评级 | 交银国际维持英伟达“买入”评级 目标价260美元",
+      "source": "财联社",
+      "date": "2026-03-23 15:47:01",
+      "url": "http://finance.eastmoney.com/a/202603233680868910.html",
+      "symbol": "NVDA"
+    },
+    {
+      "title": "美股最新评级 | 中信证券维持英伟达“买入”评级 目标价242美元",
+      "source": "财联社",
+      "date": "2026-03-18 15:45:34",
+      "url": "http://finance.eastmoney.com/a/202603183675933971.html",
+      "symbol": "NVDA"
+    },
+    {
+      "title": "黄仁勋抛出万亿美元AI芯片订单需求 但市场仍有不安情绪",
+      "source": "澎湃新闻",
+      "date": "2026-03-17 18:22:26",
+      "url": "http://finance.eastmoney.com/a/202603173674699555.html",
+      "symbol": "NVDA"
+    },
+    {
+      "title": "美股最新评级 | 华泰证券维持禾赛“买入”评级 目标价28.40美元",
+      "source": "财联社",
+      "date": "2026-03-17 15:57:46",
+      "url": "http://finance.eastmoney.com/a/202603173674555796.html",
+      "symbol": "NVDA"
+    },
+    {
+      "title": "岚图香港上市破发：车企市值分化“两超多强”",
+      "source": "财中社",
+      "date": "2026-03-20 17:40:23",
+      "url": "http://finance.eastmoney.com/a/202603203679007920.html",
+      "symbol": "NVDA"
+    },
+    {
+      "title": "马斯克“扫货”中国光伏出续集！哪些厂商能真正吃到“马链”蛋糕？",
+      "source": "澎湃新闻",
+      "date": "2026-03-20 21:30:00",
+      "url": "http://finance.eastmoney.com/a/202603203679208734.html",
+      "symbol": "TSLA"
+    },
+    {
+      "title": "在SpaceX上市前 特斯拉将其对xAI的投资转换为SpaceX股份",
+      "source": "第一财经",
+      "date": "2026-03-13 07:11:32",
+      "url": "http://finance.eastmoney.com/a/202603133670584117.html",
+      "symbol": "TSLA"
+    },
+    {
+      "title": "马斯克200亿订单传闻再次点燃光伏股",
+      "source": "界面新闻",
+      "date": "2026-03-20 18:51:52",
+      "url": "http://finance.eastmoney.com/a/202603203679080325.html",
+      "symbol": "TSLA"
+    },
+    {
+      "title": "事关货币政策等 潘功胜最新发声；OpenClaw安全使用实践指南发布；马斯克要建芯片厂：目标年产1太瓦算力丨每经早参",
+      "source": "每日经济新闻",
+      "date": "2026-03-23 05:40:56",
+      "url": "http://finance.eastmoney.com/a/202603233679862326.html",
+      "symbol": "TSLA"
+    },
+    {
+      "title": "阿里腾讯下注“中国版Neuralink”",
+      "source": "财中社",
+      "date": "2026-03-13 17:59:31",
+      "url": "http://finance.eastmoney.com/a/202603133672149779.html",
+      "symbol": "TSLA"
+    }
+  ],
+  "moneyflow": {
+    "inflow_top10": [],
+    "outflow_top10": []
+  }
+}

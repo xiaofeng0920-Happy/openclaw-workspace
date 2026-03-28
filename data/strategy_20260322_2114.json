@@ -1,0 +1,101 @@
+{
+  "timestamp": "2026-03-22T21:14:12.647805",
+  "recommendations": [
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "GOOGL",
+      "code": "谷歌-A",
+      "reason": "小幅亏损-0.0%",
+      "suggestion": "继续持有"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "BRK.B",
+      "code": "伯克希尔-B",
+      "reason": "小幅盈利11.3%",
+      "suggestion": "继续持有"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "KO",
+      "code": "可口可乐",
+      "reason": "小幅盈利6.3%",
+      "suggestion": "继续持有"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "ORCL",
+      "code": "甲骨文",
+      "reason": "小幅亏损-8.2%",
+      "suggestion": "继续持有"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "MSFT",
+      "code": "微软",
+      "reason": "小幅亏损-13.8%",
+      "suggestion": "继续持有"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "NVDA",
+      "code": "英伟达",
+      "reason": "小幅亏损-3.7%",
+      "suggestion": "继续持有"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "AAPL",
+      "code": "苹果",
+      "reason": "小幅亏损-5.6%",
+      "suggestion": "继续持有"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "TSLA",
+      "code": "特斯拉",
+      "reason": "小幅亏损-8.8%",
+      "suggestion": "继续持有"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "00700",
+      "code": "腾讯控股",
+      "reason": "小幅亏损-6.5%",
+      "suggestion": "继续持有"
+    },
+    {
+      "priority": "🔵",
+      "action": "持有",
+      "target": "09988",
+      "code": "阿里巴巴-W",
+      "reason": "小幅亏损-7.5%",
+      "suggestion": "继续持有"
+    }
+  ],
+  "portfolioStrategy": {
+    "assetAllocation": {
+      "current": {
+        "US_stocks": 60,
+        "HK_stocks": 23,
+        "options": 10,
+        "cash": 7
+      },
+      "recommended": {
+        "US_stocks": 55,
+        "HK_stocks": 20,
+        "options": 5,
+        "cash": 20
+      }
+    }
+  }
+}

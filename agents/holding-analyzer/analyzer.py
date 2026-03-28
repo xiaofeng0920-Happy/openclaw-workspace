@@ -18,12 +18,19 @@ except ImportError:
     print("请安装 akshare: pip install akshare")
     sys.exit(1)
 
+# 导入情绪因子模块（方案 1 升级）
+try:
+    from sentiment_factor import calculate_sentiment_score, get_stock_rating_with_sentiment, analyze_sentiment_for_holdings
+except ImportError:
+    print("警告：情绪因子模块未找到，将使用基础分析")
+
 # ============== 配置 ==============
 
 # 基准日期
 BENCHMARK_DATE = "2026-03-24"
 
-# 持仓数据（来自富途截图 OCR 识别 - 2026-03-24）
+# 持仓数据（来自富途截图 OCR 识别 - 2026-03-26 13:40 更新）
+# 账户：保证金综合账户 (8093)
 HOLDINGS_US = {
     'GOOGL': {'name': '谷歌-A', 'shares': 583, 'benchmark': 299.86},
     'BRK.B': {'name': '伯克希尔', 'shares': 104, 'benchmark': 480.13},
@@ -36,15 +43,15 @@ HOLDINGS_US = {
 }
 
 HOLDINGS_HK = {
-    '00700': {'name': '腾讯控股', 'shares': 2500, 'benchmark': 547.50},
+    '00700': {'name': '腾讯控股', 'shares': 2500, 'benchmark': 584.78},  # 更新：成本 547.50→584.78
     '00883': {'name': '中海油', 'shares': 11000, 'benchmark': 29.76},
-    '09988': {'name': '阿里巴巴', 'shares': 5800, 'benchmark': 132.50},
-    '03153': {'name': '南方日经 225', 'shares': 12330, 'benchmark': 107.10},
+    '09988': {'name': '阿里巴巴', 'shares': 6788, 'benchmark': 123.50},  # 更新：数量 5800→6788, 成本 132.50→123.50
+    '03153': {'name': '南方日经 225', 'shares': 13330, 'benchmark': 118.268},  # 更新：数量 12330→13330, 成本 107.10→118.268
     '07709': {'name': '南方两倍做多', 'shares': 27500, 'benchmark': 26.40},
     '03355': {'name': '飞速创新', 'shares': 100, 'benchmark': 45.80},
 }
 
-# 期权持仓（来自锋哥持仓_2026-03-16.md）
+# 期权持仓（来自锋哥持仓_2026-03-16.md + 2026-03-26 截图更新）
 OPTIONS_HOLDINGS = [
     {'symbol': 'GOOGL', 'type': 'CALL', 'expiry': '2026-06-18', 'strike': 320, 'shares': 5, 'cost': 15.50, 'name': '谷歌看涨'},
     {'symbol': 'GOOGL', 'type': 'CALL', 'expiry': '2026-05-15', 'strike': None, 'shares': 5, 'cost': None, 'name': '谷歌看涨 (未知行权价)'},
@@ -54,7 +61,10 @@ OPTIONS_HOLDINGS = [
     {'symbol': 'NVDA', 'type': 'PUT', 'expiry': '2027-01-15', 'strike': 125, 'shares': 2, 'cost': 7.50, 'name': '英伟达看跌'},
     # 港股期权
     {'symbol': '00883', 'type': 'CALL', 'expiry': '2028-04-29', 'strike': 42, 'shares': 15, 'cost': 19.30, 'name': '中海油认购', 'market': 'HK'},
-    {'symbol': '00700', 'type': 'CALL', 'expiry': '2028-05-26', 'strike': 260, 'shares': 10, 'cost': 4.84, 'name': '腾讯认购', 'market': 'HK'},
+    # 腾讯期权（2026-03-26 截图更新）
+    {'symbol': '00700', 'type': 'PUT', 'expiry': '2026-03-27', 'strike': 510, 'shares': -5, 'cost': 8.10, 'name': '腾讯沽 (Short Put)', 'market': 'HK'},
+    {'symbol': '00700', 'type': 'CALL', 'expiry': '2026-05-28', 'strike': 600, 'shares': 10, 'cost': 4.84, 'name': '腾讯购', 'market': 'HK'},
+    {'symbol': '00700', 'type': 'CALL', 'expiry': '2026-03-27', 'strike': 540, 'shares': 20, 'cost': 3.75, 'name': '腾讯购', 'market': 'HK'},
     {'symbol': '09988', 'type': 'PUT', 'expiry': '2026-03-30', 'strike': 130, 'shares': -20, 'cost': 3.98, 'name': '阿里沽 (Short Put)', 'market': 'HK'},
     {'symbol': '09988', 'type': 'CALL', 'expiry': '2026-05-28', 'strike': 140, 'shares': 10, 'cost': 2.32, 'name': '阿里购', 'market': 'HK'},
 ]
@@ -270,6 +280,30 @@ def generate_report(results, options_status, news):
     
     lines.append("")
     
+    # 【方案 1 升级】情绪因子分析
+    sentiment = results.get('sentiment')
+    if sentiment:
+        lines.append("## 📊 情绪因子分析（新权重：动量 35% | 价值 25% | 质量 25% | 情绪 15%）")
+        lines.append("")
+        
+        # 美股情绪
+        if sentiment.get('us_stocks'):
+            lines.append("### 美股情绪评分")
+            lines.append("| 股票 | 名称 | 换手率评分 | 资金流向评分 | 综合情绪 |")
+            lines.append("|------|------|-----------|-------------|---------|")
+            for s in sentiment['us_stocks'][:5]:  # 展示前 5 只
+                lines.append(f"| {s['symbol']} | {s['name']} | {s['turnover_score']} | {s['flow_score']} | {s['sentiment_score']} |")
+            lines.append("")
+        
+        # 港股情绪
+        if sentiment.get('hk_stocks'):
+            lines.append("### 港股情绪评分")
+            lines.append("| 股票 | 名称 | 换手率评分 | 资金流向评分 | 综合情绪 |")
+            lines.append("|------|------|-----------|-------------|---------|")
+            for s in sentiment['hk_stocks'][:5]:  # 展示前 5 只
+                lines.append(f"| {s['symbol']} | {s['name']} | {s['turnover_score']} | {s['flow_score']} | {s['sentiment_score']} |")
+            lines.append("")
+    
     # 新闻
     if news:
         lines.append("## 📰 相关新闻")
@@ -464,9 +498,15 @@ def generate_market_report(market_data):
 # ============== 主函数 ==============
 
 def main():
-    print("=" * 50)
-    print("持仓分析 Agent - 启动")
-    print("=" * 50)
+    print("=" * 60)
+    print("🤖 持仓分析 Agent - 启动")
+    print("=" * 60)
+    print("基准日期：2026-03-16 (配置持仓)")
+    print("预警阈值：±3.0%")
+    print("飞书推送：启用")
+    print("=" * 60)
+    print("")
+    print("📈 正在分析持仓...")
     
     # 分析持仓
     results = analyze_holdings()
@@ -478,6 +518,20 @@ def main():
     # 获取新闻
     print("正在获取相关新闻...")
     news = get_relevant_news()
+    
+    # 【方案 1 升级】情绪因子分析
+    print("正在计算情绪因子...")
+    try:
+        sentiment_us = analyze_sentiment_for_holdings(HOLDINGS_US, market="US")
+        sentiment_hk = analyze_sentiment_for_holdings(HOLDINGS_HK, market="HK")
+        results['sentiment'] = {
+            'us_stocks': sentiment_us,
+            'hk_stocks': sentiment_hk
+        }
+        print(f"  ✓ 情绪因子计算完成 (美股{len(sentiment_us)}只，港股{len(sentiment_hk)}只)")
+    except Exception as e:
+        print(f"  ⚠ 情绪因子计算失败：{e}")
+        results['sentiment'] = None
     
     # 生成报告
     report = generate_report(results, options_status, news)
