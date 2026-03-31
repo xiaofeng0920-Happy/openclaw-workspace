@@ -36,11 +36,10 @@ def init_trade_context():
     """初始化交易上下文（需要登录）"""
     global TRADE_CTX
     if TRADE_CTX is None:
-        TRADE_CTX = OpenTradeContext(
+        # 使用 HK 交易上下文（港股）
+        TRADE_CTX = OpenHKTradeContext(
             host=FUTU_CONFIG['host'],
-            port=FUTU_CONFIG['port'],
-            password=FUTU_CONFIG.get('password'),
-            password_md5=FUTU_CONFIG.get('password_md5')
+            port=FUTU_CONFIG['port']
         )
         print("✅ 交易上下文已连接")
     return TRADE_CTX
@@ -77,34 +76,42 @@ def get_stock_price(symbol, market='US'):
 
 def get_us_holdings():
     """获取美股真实持仓"""
+    from futu import RET_OK, Market
+    
     ctx = init_trade_context()
     try:
-        # 需要先获取账户列表
         ret_acc, acc_list = ctx.get_acc_list()
         if ret_acc != RET_OK:
             print(f"获取账户列表失败：{acc_list}")
             return []
         
         holdings = []
-        for acc in acc_list.to_dict():
-            if acc['trd_env'] == 0:  # 真实账户
-                ret, data = ctx.get_position_list(
-                    trd_acc=acc['trd_acc'],
-                    position_filter=0,  # 全部持仓
-                    code='',
-                    market=Market.US
-                )
-                if ret == RET_OK:
-                    for _, row in data.iterrows():
-                        holdings.append({
-                            'symbol': row['code'].replace('US.', ''),
-                            'name': row.get('name', ''),
-                            'shares': float(row['qty']),
-                            'cost_price': float(row.get('cost_price', 0)),
-                            'market_value': float(row.get('market_val', 0)),
-                            'pl': float(row.get('pl_val', 0)),
-                            'pl_pct': float(row.get('pl_ratio', 0)) * 100
-                        })
+        acc_dict = acc_list.to_dict()
+        acc_ids = acc_dict.get('acc_id', {})
+        trd_envs = acc_dict.get('trd_env', {})
+        
+        # 遍历所有账户
+        for idx in acc_ids.keys():
+            trd_env = trd_envs.get(idx)
+            print(f"  尝试账户索引 {idx} (环境：{trd_env})")
+            
+            ret, data = ctx.position_list_query(
+                acc_index=int(idx),
+                code='',
+                trd_env=trd_env,
+                position_market=Market.US
+            )
+            if ret == RET_OK:
+                for _, row in data.iterrows():
+                    holdings.append({
+                        'symbol': row['code'].replace('US.', ''),
+                        'name': row.get('name', ''),
+                        'shares': float(row['qty']),
+                        'cost_price': float(row.get('cost_price', 0)),
+                        'market_value': float(row.get('market_val', 0)),
+                        'pl': float(row.get('pl_val', 0)),
+                        'pl_pct': float(row.get('pl_ratio', 0)) * 100
+                    })
         return holdings
     except Exception as e:
         print(f"获取美股持仓失败：{e}")
@@ -112,6 +119,8 @@ def get_us_holdings():
 
 def get_hk_holdings():
     """获取港股真实持仓"""
+    from futu import RET_OK, Market
+    
     ctx = init_trade_context()
     try:
         ret_acc, acc_list = ctx.get_acc_list()
@@ -120,25 +129,32 @@ def get_hk_holdings():
             return []
         
         holdings = []
-        for acc in acc_list.to_dict():
-            if acc['trd_env'] == 0:
-                ret, data = ctx.get_position_list(
-                    trd_acc=acc['trd_acc'],
-                    position_filter=0,
-                    code='',
-                    market=Market.HK
-                )
-                if ret == RET_OK:
-                    for _, row in data.iterrows():
-                        holdings.append({
-                            'symbol': row['code'].replace('HK.', ''),
-                            'name': row.get('name', ''),
-                            'shares': float(row['qty']),
-                            'cost_price': float(row.get('cost_price', 0)),
-                            'market_value': float(row.get('market_val', 0)),
-                            'pl': float(row.get('pl_val', 0)),
-                            'pl_pct': float(row.get('pl_ratio', 0)) * 100
-                        })
+        acc_dict = acc_list.to_dict()
+        acc_ids = acc_dict.get('acc_id', {})
+        trd_envs = acc_dict.get('trd_env', {})
+        
+        # 遍历所有账户
+        for idx in acc_ids.keys():
+            trd_env = trd_envs.get(idx)
+            print(f"  尝试账户索引 {idx} (环境：{trd_env})")
+            
+            ret, data = ctx.position_list_query(
+                acc_index=int(idx),
+                code='',
+                trd_env=trd_env,
+                position_market=Market.HK
+            )
+            if ret == RET_OK:
+                for _, row in data.iterrows():
+                    holdings.append({
+                        'symbol': row['code'].replace('HK.', ''),
+                        'name': row.get('name', ''),
+                        'shares': float(row['qty']),
+                        'cost_price': float(row.get('cost_price', 0)),
+                        'market_value': float(row.get('market_val', 0)),
+                        'pl': float(row.get('pl_val', 0)),
+                        'pl_pct': float(row.get('pl_ratio', 0)) * 100
+                    })
         return holdings
     except Exception as e:
         print(f"获取港股持仓失败：{e}")
