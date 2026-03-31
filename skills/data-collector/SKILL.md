@@ -2,6 +2,7 @@
 name: data-collector
 description: 股票投资团队 - 数据收集员。负责获取所有持仓股票的实时股价、财报数据、大盘指数、市场新闻。
 license: Proprietary
+version: 1.0.0
 ---
 
 # 📡 数据收集员 (DataCollector)

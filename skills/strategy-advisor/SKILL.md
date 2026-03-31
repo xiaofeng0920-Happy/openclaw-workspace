@@ -2,6 +2,7 @@
 name: strategy-advisor
 description: 股票投资团队 - 策略顾问。基于分析结果生成操作建议（买入/卖出/持有）。
 license: Proprietary
+version: 1.0.0
 ---
 
 # 🧠 策略顾问 (StrategyAdvisor)

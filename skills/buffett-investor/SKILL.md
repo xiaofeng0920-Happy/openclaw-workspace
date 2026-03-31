@@ -1,3 +1,9 @@
+---
+name: buffett-investor
+description: 巴菲特价值投资自动化技能。股票筛选、市场状态识别、动态配置、调仓 rebalance。
+version: 1.0.0
+---
+
 # SKILL.md - buffett-investor 技能说明
 
 ## 技能名称

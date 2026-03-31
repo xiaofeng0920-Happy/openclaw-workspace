@@ -2,6 +2,7 @@
 name: portfolio-analyzer
 description: 股票投资团队 - 持仓分析师。负责对比实时股价与持仓成本，计算盈亏变化。支持 QVeris/富途/akshare 多数据源。
 license: Proprietary
+version: 1.0.0
 ---
 
 # 📊 持仓分析师 (PortfolioAnalyzer)

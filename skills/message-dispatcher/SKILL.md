@@ -2,6 +2,7 @@
 name: message-dispatcher
 description: 股票投资团队 - 消息推送员。将报告推送到飞书等渠道。
 license: Proprietary
+version: 1.0.0
 ---
 
 # 📬 消息推送员 (MessageDispatcher)

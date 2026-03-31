@@ -2,6 +2,7 @@
 name: report-writer
 description: 股票投资团队 - 报告撰写员。将数据整合成易读的 Markdown 报告。
 license: Proprietary
+version: 1.0.0
 ---
 
 # ✍️ 报告撰写员 (ReportWriter)

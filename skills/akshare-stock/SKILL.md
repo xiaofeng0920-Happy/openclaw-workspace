@@ -2,6 +2,7 @@
 name: akshare-stock
 description: A 股量化数据查询技能，使用 AkShare 获取实时行情、K 线、财务数据、资金流向等。
 license: MIT
+version: 1.0.0
 ---
 
 # 📊 AkShare Stock - A 股数据查询
